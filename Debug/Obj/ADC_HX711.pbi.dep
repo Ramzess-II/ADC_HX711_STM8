@@ -1,0 +1,5 @@
+ADC_HX711.pbi: \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\io_macros.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\iostm8s103f3.h \
+  C:\Users\RSolovyov\iar\first_prjct\ADC_HX711.h \
+  C:\Users\RSolovyov\iar\first_prjct\ADC_HX711.c

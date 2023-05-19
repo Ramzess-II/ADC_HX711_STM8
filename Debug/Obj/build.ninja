@@ -21,9 +21,10 @@ rule browsedata
 
 #Build steps
 build ADC_HX711.pbi : index ADC_HX711.xcl
+build DS18B20.pbi : index DS18B20.xcl
 build Init_stm.pbi : index Init_stm.xcl
 build main.pbi : index main.xcl
-build first.pbd : link ADC_HX711.pbi Init_stm.pbi main.pbi
+build first.pbd : link ADC_HX711.pbi DS18B20.pbi Init_stm.pbi main.pbi
 build first.pbw : browsedata first.pbd
 
 

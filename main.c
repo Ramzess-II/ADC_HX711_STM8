@@ -1,10 +1,9 @@
 #include "main.h"
 
-
 int i = 0;
 struct flags {
-unsigned char flag_led :1;
-unsigned char flag_2 :1;
+  uint8_t flag_led :1;
+  uint8_t flag_2 :1;
 };
 
 struct flags flag;
@@ -34,8 +33,7 @@ int main( void )
 
 #pragma vector=TIM4_OVR_UIF_vector  // set interrupt funcion 
 __interrupt void TIM4_OVR_UIF_Handler (void) {
-  i ++;
-  TIM4_SR_UIF = 0;
+    read_data_ADC();
 }
 
 

@@ -13,10 +13,9 @@ void init_gpio (void) {
 }
 
 void init_tim4 (void) {
-  TIM4_PSCR_PSC =  6;   // prescaler
-  TIM4_ARR = 250;       // autoreoload  10069 Hz
-  TIM4_IER_UIE = 1;     // interrupt enable
-  //TIM4_CR1_ARPE = 1;  // enable auto preload
+  TIM4_PSCR_PSC =  2;   // prescaler    // 6 for 1kHz
+  TIM4_ARR = 20;        // autoreoload  // 250
+  //TIM4_IER_UIE = 1;   // interrupt enable
+  //TIM4_CR1_ARPE = 1;  // enable auto preload for avtomatic new value 
   TIM4_CR1_CEN = 1;     // counter enable
-  
 }

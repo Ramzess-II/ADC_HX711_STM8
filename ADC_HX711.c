@@ -1,9 +1,18 @@
 #include "ADC_HX711.h" 
 
-#define SCK_PIN_ON        PD_ODR_ODR2 = 1     // PD2
-#define SCK_PIN_OFF       PD_ODR_ODR2 = 0     // PD2
-#define READ_DOUT         PD_IDR_IDR3         // PD3
 
+
+uint32_t adc_value = 0;
+uint32_t adc_new_value = 0;
+
+struct adc_union {
+  uint16_t count_sck :6;
+  uint16_t data_ok :1;
+  uint16_t high_low_sck :1;
+  uint16_t stop_adc_measurement :1;
+};
+
+struct adc_union adc_flag = {GAIN_ADC, 0, 0, 0};
 
 void init_ADC_pin (void) {
   // SCK_PIN PD2
@@ -17,13 +26,44 @@ void init_ADC_pin (void) {
   EXTI_CR1_PDIS = 2;     // inerrupt falling portD
 }
 
-void read_data_ADC (char quantity ) {
-  
+void read_data_ADC (void) {       // call in timer
+  if (adc_flag.data_ok) {
+    if (adc_flag.count_sck > 0) {
+      if (!adc_flag.high_low_sck) {
+        SCK_PIN_ON;
+        adc_flag.high_low_sck = true;
+      } else {
+          if (READ_DOUT && adc_flag.count_sck <= 23) {
+            adc_new_value |= (uint32_t)1 << adc_flag.count_sck;
+          } 
+          adc_flag.high_low_sck = false;
+          adc_flag.count_sck --;
+          SCK_PIN_OFF;
+      }
+    } else {
+      TIM4_IER_UIE = 0;   // interrupt disable
+      adc_flag.data_ok = false;
+      adc_flag.count_sck = GAIN_ADC;
+      adc_new_value = adc_new_value^0x800000;
+      adc_value = adc_new_value;
+      adc_new_value = 0;
+      PD_CR2_C23 = 1;        // External interrupt enabled
+    }
+  } 
 }
 
 #pragma vector=EXTI3_vector  // set interrupt funcion 
 __interrupt void EXTI2_Handler (void) {
-  if (READ_DOUT) {
-    SCK_PIN_ON;
+  if (!READ_DOUT) {
+    if (!adc_flag.stop_adc_measurement) {
+      adc_flag.data_ok = true;
+      adc_flag.high_low_sck = false;
+      TIM4_CNTR = 0;      // reset timer counter
+      TIM4_IER_UIE = 1;   // interrupt enable
+      adc_new_value = 0;
+      PD_CR2_C23 = 0;        // External interrupt disabled
+    }
   }
 }
+//^0x800000;
+

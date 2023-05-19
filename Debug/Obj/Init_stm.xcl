@@ -1,14 +1,14 @@
-"C:\Users\RSolovyov\iar\first_prjct\Init_stm.c"
+"C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\Init_stm.c"
 -std=c99
 -ferror-limit=0
 -fbracket-depth=512
 -MD
 -MF
-C:\Users\RSolovyov\iar\first_prjct\Debug\Obj\Init_stm.pbi.dep
+C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\Debug\Obj\Init_stm.pbi.dep
 -o
 Init_stm.pbi
 -I
-C:\Users\RSolovyov\iar\first_prjct
+C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\stm8\inc
 -I

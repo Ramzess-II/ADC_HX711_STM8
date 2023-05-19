@@ -1,12 +1,12 @@
-"C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\ADC_HX711.c"
+"C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\DS18B20.c"
 -std=c99
 -ferror-limit=0
 -fbracket-depth=512
 -MD
 -MF
-C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\Debug\Obj\ADC_HX711.pbi.dep
+C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\Debug\Obj\DS18B20.pbi.dep
 -o
-ADC_HX711.pbi
+DS18B20.pbi
 -I
 C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8
 -I

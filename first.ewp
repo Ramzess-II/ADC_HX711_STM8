@@ -650,7 +650,7 @@
                 </option>
                 <option>
                     <name>IlinkExtraOptions</name>
-                    <state></state>
+                    <state>-Ointel-extended,(CODE)=name.hex</state>
                 </option>
                 <option>
                     <name>IlinkAutoLibEnable</name>
@@ -1641,6 +1641,9 @@
             <name>$PROJ_DIR$\ADC_HX711.h</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\DS18B20.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\Init_stm.h</name>
         </file>
         <file>
@@ -1651,6 +1654,9 @@
         <name>Src</name>
         <file>
             <name>$PROJ_DIR$\ADC_HX711.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\DS18B20.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\Init_stm.c</name>

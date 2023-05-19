@@ -1,5 +1,6 @@
-main.pbi: C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\main.c \
-  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8/main.h \
+DS18B20.pbi: \
+  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\DS18B20.c \
+  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8/DS18B20.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\iostm8s103f3.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc/io_macros.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\stdint.h \
@@ -9,7 +10,4 @@ main.pbi: C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\main.c \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\LIB\dlstm8smn.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\DLib_Product.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\xencoding_limits.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\DLib_Threads.h \
-  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8/init_stm.h \
-  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8/ADC_HX711.h \
-  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8/DS18B20.h
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\DLib_Threads.h

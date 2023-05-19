@@ -1,4 +1,5 @@
-Init_stm.pbi: C:\Users\RSolovyov\iar\first_prjct\Init_stm.c \
-  C:\Users\RSolovyov\iar\first_prjct/init_stm.h \
+Init_stm.pbi: \
+  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\Init_stm.c \
+  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8/init_stm.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\iostm8s103f3.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc/io_macros.h

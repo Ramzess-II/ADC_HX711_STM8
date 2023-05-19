@@ -41,7 +41,7 @@ void read_data_ADC (void) {       // call in timer
           SCK_PIN_OFF;
       }
     } else {
-      TIM4_IER_UIE = 0;   // interrupt disable
+      //TIM4_IER_UIE = 0;   // interrupt disable
       adc_flag.data_ok = false;
       adc_flag.count_sck = GAIN_ADC;
       adc_new_value = adc_new_value^0x800000;
@@ -59,7 +59,7 @@ __interrupt void EXTI2_Handler (void) {
       adc_flag.data_ok = true;
       adc_flag.high_low_sck = false;
       TIM4_CNTR = 0;      // reset timer counter
-      TIM4_IER_UIE = 1;   // interrupt enable
+      //TIM4_IER_UIE = 1;   // interrupt enable
       adc_new_value = 0;
       PD_CR2_C23 = 0;        // External interrupt disabled
     }

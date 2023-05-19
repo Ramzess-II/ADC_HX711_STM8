@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>4</fileVersion>
-    <fileChecksum>1831271459</fileChecksum>
+    <fileChecksum>145609321</fileChecksum>
     <configuration>
         <name>Debug</name>
         <outputs>
@@ -28,6 +28,7 @@
             <file>$PROJ_DIR$\Debug\Obj\ADC_HX711.o</file>
             <file>$TOOLKIT_DIR$\inc\io_macros.h</file>
             <file>$PROJ_DIR$\..\..\..\iar\first_prjct\main.c</file>
+            <file>$PROJ_DIR$\Debug\Exe\--ihex first.hex</file>
             <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
             <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
             <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
@@ -36,8 +37,10 @@
             <file>$TOOLKIT_DIR$\lib\dlstm8smn.h</file>
             <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
             <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\Debug\Exe\first--ihex</file>
             <file>$PROJ_DIR$\Debug\Obj\DS18B20.o</file>
             <file>$PROJ_DIR$\Debug\Obj\DS18B20.xcl</file>
+            <file>$PROJ_DIR$\Debug\Exe\first.hex</file>
             <file>$PROJ_DIR$\DS18B20.c</file>
             <file>$PROJ_DIR$\DS18B20.h</file>
         </outputs>
@@ -65,7 +68,7 @@
             <inputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 0 14 21 30 29 26 27 28 23 25 24</file>
+                    <file> 0 14 21 31 30 27 28 29 24 26 25</file>
                 </tool>
             </inputs>
         </file>
@@ -88,7 +91,7 @@
             <inputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 10 14 21 30 29 26 27 28 23 25 24 15 0 34</file>
+                    <file> 10 14 21 31 30 27 28 29 24 26 25 15 0 37</file>
                 </tool>
             </inputs>
         </file>
@@ -97,7 +100,7 @@
             <outputs>
                 <tool>
                     <name>OBJCOPY</name>
-                    <file> 13</file>
+                    <file> 35</file>
                 </tool>
                 <tool>
                     <name>ILINK</name>
@@ -107,7 +110,7 @@
             <inputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 4 20 31 12 5 17 18</file>
+                    <file> 4 20 33 12 5 17 18</file>
                 </tool>
             </inputs>
         </file>
@@ -135,17 +138,17 @@
             <outputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 31</file>
+                    <file> 33</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 32</file>
+                    <file> 34</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 34 14 21 30 29 26 27 28 23 25 24</file>
+                    <file> 37 14 21 31 30 27 28 29 24 26 25</file>
                 </tool>
             </inputs>
         </file>

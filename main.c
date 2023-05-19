@@ -12,6 +12,8 @@ int main( void )
 {
   init_rcc ();
   init_tim4();
+  init_tim2();
+  init_tim1();
   init_gpio();
   init_ADC_pin();
   
@@ -36,4 +38,14 @@ __interrupt void TIM4_OVR_UIF_Handler (void) {
     read_data_ADC();
 }
 
+#pragma vector=TIM2_OVR_UIF_vector  // set interrupt funcion 
+__interrupt void TIM2_OVR_UIF_Handler (void) {
+    read_DS18B20 ();
+    write_DS18B20();
+}
+
+#pragma vector=TIM1_OVR_UIF_vector  // set interrupt funcion 
+__interrupt void TIM1_OVR_UIF_Handler (void) {
+
+}
 

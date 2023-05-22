@@ -6639,20 +6639,6 @@
     },
     "members": [
       {
-        "ID": "c:iostm8s103f3.h@Ua@FI@PD_ODR",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "PD_ODR",
-        "location": {
-          "column": "1",
-          "line": "640",
-          "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\iostm8s103f3.h"
-        },
-        "name": "PD_ODR",
-        "origin": "system_include",
-        "scope": "_anonymous_iostm8s103f3_h_640_1"
-      },
-      {
         "ID": "c:iostm8s103f3.h@Ua@FI@PD_ODR_bit",
         "What": "FieldDecl",
         "defdec": "Def",
@@ -6663,6 +6649,20 @@
           "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\iostm8s103f3.h"
         },
         "name": "PD_ODR_bit",
+        "origin": "system_include",
+        "scope": "_anonymous_iostm8s103f3_h_640_1"
+      },
+      {
+        "ID": "c:iostm8s103f3.h@Ua@FI@PD_ODR",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "PD_ODR",
+        "location": {
+          "column": "1",
+          "line": "640",
+          "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\iostm8s103f3.h"
+        },
+        "name": "PD_ODR",
         "origin": "system_include",
         "scope": "_anonymous_iostm8s103f3_h_640_1"
       }
@@ -31619,20 +31619,6 @@
     },
     "members": [
       {
-        "ID": "c:iostm8s103f3.h@Ua@FI@TIM2_CR1_bit",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "TIM2_CR1_bit",
-        "location": {
-          "column": "1",
-          "line": "3093",
-          "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\iostm8s103f3.h"
-        },
-        "name": "TIM2_CR1_bit",
-        "origin": "system_include",
-        "scope": "_anonymous_iostm8s103f3_h_3093_1"
-      },
-      {
         "ID": "c:iostm8s103f3.h@Ua@FI@TIM2_CR1",
         "What": "FieldDecl",
         "defdec": "Def",
@@ -31643,6 +31629,20 @@
           "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\iostm8s103f3.h"
         },
         "name": "TIM2_CR1",
+        "origin": "system_include",
+        "scope": "_anonymous_iostm8s103f3_h_3093_1"
+      },
+      {
+        "ID": "c:iostm8s103f3.h@Ua@FI@TIM2_CR1_bit",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "TIM2_CR1_bit",
+        "location": {
+          "column": "1",
+          "line": "3093",
+          "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\iostm8s103f3.h"
+        },
+        "name": "TIM2_CR1_bit",
         "origin": "system_include",
         "scope": "_anonymous_iostm8s103f3_h_3093_1"
       }
@@ -31763,20 +31763,6 @@
     },
     "members": [
       {
-        "ID": "c:iostm8s103f3.h@Ua@FI@TIM2_IER_bit",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "TIM2_IER_bit",
-        "location": {
-          "column": "1",
-          "line": "3107",
-          "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\iostm8s103f3.h"
-        },
-        "name": "TIM2_IER_bit",
-        "origin": "system_include",
-        "scope": "_anonymous_iostm8s103f3_h_3107_1"
-      },
-      {
         "ID": "c:iostm8s103f3.h@Ua@FI@TIM2_IER",
         "What": "FieldDecl",
         "defdec": "Def",
@@ -31787,6 +31773,20 @@
           "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\iostm8s103f3.h"
         },
         "name": "TIM2_IER",
+        "origin": "system_include",
+        "scope": "_anonymous_iostm8s103f3_h_3107_1"
+      },
+      {
+        "ID": "c:iostm8s103f3.h@Ua@FI@TIM2_IER_bit",
+        "What": "FieldDecl",
+        "defdec": "Def",
+        "display": "TIM2_IER_bit",
+        "location": {
+          "column": "1",
+          "line": "3107",
+          "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.3\\stm8\\inc\\iostm8s103f3.h"
+        },
+        "name": "TIM2_IER_bit",
         "origin": "system_include",
         "scope": "_anonymous_iostm8s103f3_h_3107_1"
       }
@@ -43722,13 +43722,27 @@
     "scope": null
   },
   {
-    "ID": "c:ADC_HX711.h@252@macro@READ_DOUT",
+    "ID": "c:ADC_HX711.h@252@macro@SCK_PIN_READ",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "SCK_PIN_READ",
+    "location": {
+      "column": "9",
+      "line": "9",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\ADC_HX711.h"
+    },
+    "name": "SCK_PIN_READ",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ADC_HX711.h@306@macro@READ_DOUT",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "READ_DOUT",
     "location": {
       "column": "9",
-      "line": "9",
+      "line": "10",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\ADC_HX711.h"
     },
     "name": "READ_DOUT",
@@ -43736,13 +43750,13 @@
     "scope": null
   },
   {
-    "ID": "c:ADC_HX711.h@308@macro@GAIN_ADC",
+    "ID": "c:ADC_HX711.h@362@macro@GAIN_ADC",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "GAIN_ADC",
     "location": {
       "column": "9",
-      "line": "11",
+      "line": "12",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\ADC_HX711.h"
     },
     "name": "GAIN_ADC",
@@ -43750,13 +43764,13 @@
     "scope": null
   },
   {
-    "ID": "c:ADC_HX711.h@379@macro@true",
+    "ID": "c:ADC_HX711.h@433@macro@true",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "true",
     "location": {
       "column": "9",
-      "line": "12",
+      "line": "13",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\ADC_HX711.h"
     },
     "name": "true",
@@ -43764,13 +43778,13 @@
     "scope": null
   },
   {
-    "ID": "c:ADC_HX711.h@399@macro@false",
+    "ID": "c:ADC_HX711.h@453@macro@false",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "false",
     "location": {
       "column": "9",
-      "line": "13",
+      "line": "14",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\ADC_HX711.h"
     },
     "name": "false",
@@ -43784,7 +43798,7 @@
     "display": "void init_ADC_pin(void)",
     "location": {
       "column": "6",
-      "line": "15",
+      "line": "16",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\ADC_HX711.h"
     },
     "name": "init_ADC_pin",
@@ -43798,7 +43812,7 @@
     "display": "void init_ADC_pin(void)",
     "location": {
       "column": "6",
-      "line": "15",
+      "line": "16",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\ADC_HX711.h"
     },
     "name": "init_ADC_pin",
@@ -43812,7 +43826,7 @@
     "display": "void read_data_ADC(void)",
     "location": {
       "column": "6",
-      "line": "16",
+      "line": "17",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\ADC_HX711.h"
     },
     "name": "read_data_ADC",
@@ -43826,10 +43840,38 @@
     "display": "void read_data_ADC(void)",
     "location": {
       "column": "6",
-      "line": "16",
+      "line": "17",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\ADC_HX711.h"
     },
     "name": "read_data_ADC",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@stop_adc_read",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void stop_adc_read(uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "18",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\ADC_HX711.h"
+    },
+    "name": "stop_adc_read",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@stop_adc_read",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void stop_adc_read(uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "18",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\ADC_HX711.h"
+    },
+    "name": "stop_adc_read",
     "origin": "user_include",
     "scope": null
   },
@@ -43854,7 +43896,7 @@
     "display": "adc_value",
     "location": {
       "column": "10",
-      "line": "5",
+      "line": "4",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\ADC_HX711.c"
     },
     "name": "adc_value",
@@ -43868,7 +43910,7 @@
     "display": "adc_new_value",
     "location": {
       "column": "10",
-      "line": "6",
+      "line": "5",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\ADC_HX711.c"
     },
     "name": "adc_new_value",
@@ -43882,7 +43924,7 @@
     "display": "adc_union",
     "location": {
       "column": "8",
-      "line": "8",
+      "line": "7",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\ADC_HX711.c"
     },
     "members": [
@@ -43892,8 +43934,8 @@
         "defdec": "Def",
         "display": "count_sck",
         "location": {
-          "column": "12",
-          "line": "9",
+          "column": "11",
+          "line": "8",
           "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\ADC_HX711.c"
         },
         "name": "count_sck",
@@ -43906,8 +43948,8 @@
         "defdec": "Def",
         "display": "data_ok",
         "location": {
-          "column": "12",
-          "line": "10",
+          "column": "11",
+          "line": "9",
           "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\ADC_HX711.c"
         },
         "name": "data_ok",
@@ -43920,8 +43962,8 @@
         "defdec": "Def",
         "display": "high_low_sck",
         "location": {
-          "column": "12",
-          "line": "11",
+          "column": "11",
+          "line": "10",
           "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\ADC_HX711.c"
         },
         "name": "high_low_sck",
@@ -43934,8 +43976,8 @@
         "defdec": "Def",
         "display": "stop_adc_measurement",
         "location": {
-          "column": "12",
-          "line": "12",
+          "column": "11",
+          "line": "11",
           "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\ADC_HX711.c"
         },
         "name": "stop_adc_measurement",
@@ -43954,7 +43996,7 @@
     "display": "adc_flag",
     "location": {
       "column": "18",
-      "line": "15",
+      "line": "14",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\ADC_HX711.c"
     },
     "name": "adc_flag",
@@ -43968,7 +44010,7 @@
     "display": "void init_ADC_pin(void)",
     "location": {
       "column": "6",
-      "line": "17",
+      "line": "16",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\ADC_HX711.c"
     },
     "name": "init_ADC_pin",
@@ -43982,7 +44024,7 @@
     "display": "void read_data_ADC(void)",
     "location": {
       "column": "6",
-      "line": "29",
+      "line": "55",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\ADC_HX711.c"
     },
     "name": "read_data_ADC",
@@ -43996,10 +44038,24 @@
     "display": "void EXTI2_Handler(void)",
     "location": {
       "column": "18",
-      "line": "56",
+      "line": "82",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\ADC_HX711.c"
     },
     "name": "EXTI2_Handler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@stop_adc_read",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void stop_adc_read(uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "95",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\ADC_HX711.c"
+    },
+    "name": "stop_adc_read",
     "origin": "project_file",
     "scope": null
   },
@@ -44018,13 +44074,139 @@
     "scope": null
   },
   {
+    "ID": "c:DS18B20.h@140@macro@true",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "true",
+    "location": {
+      "column": "9",
+      "line": "7",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\DS18B20.h"
+    },
+    "name": "true",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DS18B20.h@167@macro@false",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "false",
+    "location": {
+      "column": "9",
+      "line": "8",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\DS18B20.h"
+    },
+    "name": "false",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DS18B20.h@196@macro@DS_PIN_OUT_ON",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "DS_PIN_OUT_ON",
+    "location": {
+      "column": "9",
+      "line": "10",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\DS18B20.h"
+    },
+    "name": "DS_PIN_OUT_ON",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DS18B20.h@238@macro@DS_PIN_OUT_OFF",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "DS_PIN_OUT_OFF",
+    "location": {
+      "column": "9",
+      "line": "11",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\DS18B20.h"
+    },
+    "name": "DS_PIN_OUT_OFF",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DS18B20.h@280@macro@DS_PIN_READ",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "DS_PIN_READ",
+    "location": {
+      "column": "9",
+      "line": "12",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\DS18B20.h"
+    },
+    "name": "DS_PIN_READ",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@init_DS18B20_pin",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void init_DS18B20_pin(void)",
+    "location": {
+      "column": "6",
+      "line": "14",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\DS18B20.h"
+    },
+    "name": "init_DS18B20_pin",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@init_DS18B20_pin",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void init_DS18B20_pin(void)",
+    "location": {
+      "column": "6",
+      "line": "14",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\DS18B20.h"
+    },
+    "name": "init_DS18B20_pin",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@init_sensor_DS18B20",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void init_sensor_DS18B20(void)",
+    "location": {
+      "column": "6",
+      "line": "15",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\DS18B20.h"
+    },
+    "name": "init_sensor_DS18B20",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@init_sensor_DS18B20",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void init_sensor_DS18B20(void)",
+    "location": {
+      "column": "6",
+      "line": "15",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\DS18B20.h"
+    },
+    "name": "init_sensor_DS18B20",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:@F@read_DS18B20",
     "What": "Function",
     "defdec": "Dec",
     "display": "void read_DS18B20(void)",
     "location": {
       "column": "6",
-      "line": "8",
+      "line": "16",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\DS18B20.h"
     },
     "name": "read_DS18B20",
@@ -44038,7 +44220,7 @@
     "display": "void read_DS18B20(void)",
     "location": {
       "column": "6",
-      "line": "8",
+      "line": "16",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\DS18B20.h"
     },
     "name": "read_DS18B20",
@@ -44052,7 +44234,7 @@
     "display": "void write_DS18B20(void)",
     "location": {
       "column": "6",
-      "line": "9",
+      "line": "17",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\DS18B20.h"
     },
     "name": "write_DS18B20",
@@ -44066,38 +44248,10 @@
     "display": "void write_DS18B20(void)",
     "location": {
       "column": "6",
-      "line": "9",
+      "line": "17",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\DS18B20.h"
     },
     "name": "write_DS18B20",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@start_send_DS18B20",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void start_send_DS18B20(void)",
-    "location": {
-      "column": "6",
-      "line": "10",
-      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\DS18B20.h"
-    },
-    "name": "start_send_DS18B20",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@start_send_DS18B20",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void start_send_DS18B20(void)",
-    "location": {
-      "column": "6",
-      "line": "10",
-      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\DS18B20.h"
-    },
-    "name": "start_send_DS18B20",
     "origin": "user_include",
     "scope": null
   },
@@ -44108,35 +44262,21 @@
     "display": "DS18B20_union",
     "location": {
       "column": "8",
-      "line": "3",
+      "line": "5",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\DS18B20.c"
     },
     "members": [
       {
-        "ID": "c:@S@DS18B20_union@FI@read_ok",
+        "ID": "c:@S@DS18B20_union@FI@presence",
         "What": "FieldDecl",
         "defdec": "Def",
-        "display": "read_ok",
+        "display": "presence",
         "location": {
           "column": "11",
-          "line": "4",
+          "line": "6",
           "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\DS18B20.c"
         },
-        "name": "read_ok",
-        "origin": "project_file",
-        "scope": "DS18B20_union"
-      },
-      {
-        "ID": "c:@S@DS18B20_union@FI@write_ok",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "write_ok",
-        "location": {
-          "column": "11",
-          "line": "5",
-          "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\DS18B20.c"
-        },
-        "name": "write_ok",
+        "name": "presence",
         "origin": "project_file",
         "scope": "DS18B20_union"
       }
@@ -44152,10 +44292,38 @@
     "display": "DS18B20_flag",
     "location": {
       "column": "22",
-      "line": "8",
+      "line": "9",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\DS18B20.c"
     },
     "name": "DS18B20_flag",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@init_DS18B20_pin",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void init_DS18B20_pin(void)",
+    "location": {
+      "column": "6",
+      "line": "11",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\DS18B20.c"
+    },
+    "name": "init_DS18B20_pin",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@init_sensor_DS18B20",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void init_sensor_DS18B20(void)",
+    "location": {
+      "column": "6",
+      "line": "23",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\DS18B20.c"
+    },
+    "name": "init_sensor_DS18B20",
     "origin": "project_file",
     "scope": null
   },
@@ -44166,7 +44334,7 @@
     "display": "void read_DS18B20(void)",
     "location": {
       "column": "6",
-      "line": "10",
+      "line": "35",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\DS18B20.c"
     },
     "name": "read_DS18B20",
@@ -44180,248 +44348,10 @@
     "display": "void write_DS18B20(void)",
     "location": {
       "column": "6",
-      "line": "16",
+      "line": "40",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\DS18B20.c"
     },
     "name": "write_DS18B20",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@start_send_DS18B20",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void start_send_DS18B20(void)",
-    "location": {
-      "column": "6",
-      "line": "22",
-      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\DS18B20.c"
-    },
-    "name": "start_send_DS18B20",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:init_stm.h@30@macro@__INIT_STM_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__INIT_STM_H",
-    "location": {
-      "column": "9",
-      "line": "2",
-      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.h"
-    },
-    "name": "__INIT_STM_H",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@init_rcc",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void init_rcc(void)",
-    "location": {
-      "column": "6",
-      "line": "6",
-      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.h"
-    },
-    "name": "init_rcc",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@init_rcc",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void init_rcc(void)",
-    "location": {
-      "column": "6",
-      "line": "6",
-      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.h"
-    },
-    "name": "init_rcc",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@init_gpio",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void init_gpio(void)",
-    "location": {
-      "column": "6",
-      "line": "7",
-      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.h"
-    },
-    "name": "init_gpio",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@init_gpio",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void init_gpio(void)",
-    "location": {
-      "column": "6",
-      "line": "7",
-      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.h"
-    },
-    "name": "init_gpio",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@init_tim4",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void init_tim4(void)",
-    "location": {
-      "column": "6",
-      "line": "8",
-      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.h"
-    },
-    "name": "init_tim4",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@init_tim4",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void init_tim4(void)",
-    "location": {
-      "column": "6",
-      "line": "8",
-      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.h"
-    },
-    "name": "init_tim4",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@init_tim2",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void init_tim2(void)",
-    "location": {
-      "column": "6",
-      "line": "9",
-      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.h"
-    },
-    "name": "init_tim2",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@init_tim2",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void init_tim2(void)",
-    "location": {
-      "column": "6",
-      "line": "9",
-      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.h"
-    },
-    "name": "init_tim2",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@init_tim1",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void init_tim1(void)",
-    "location": {
-      "column": "6",
-      "line": "10",
-      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.h"
-    },
-    "name": "init_tim1",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@init_tim1",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void init_tim1(void)",
-    "location": {
-      "column": "6",
-      "line": "10",
-      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.h"
-    },
-    "name": "init_tim1",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@init_rcc",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void init_rcc(void)",
-    "location": {
-      "column": "6",
-      "line": "4",
-      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.c"
-    },
-    "name": "init_rcc",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@init_gpio",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void init_gpio(void)",
-    "location": {
-      "column": "6",
-      "line": "8",
-      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.c"
-    },
-    "name": "init_gpio",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@init_tim4",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void init_tim4(void)",
-    "location": {
-      "column": "6",
-      "line": "15",
-      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.c"
-    },
-    "name": "init_tim4",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@init_tim2",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void init_tim2(void)",
-    "location": {
-      "column": "6",
-      "line": "23",
-      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.c"
-    },
-    "name": "init_tim2",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@init_tim1",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void init_tim1(void)",
-    "location": {
-      "column": "6",
-      "line": "31",
-      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.c"
-    },
-    "name": "init_tim1",
     "origin": "project_file",
     "scope": null
   },
@@ -44468,6 +44398,314 @@
     "scope": null
   },
   {
+    "ID": "c:main.h@86@macro@DELAY_CYCLES",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "DELAY_CYCLES",
+    "location": {
+      "column": "9",
+      "line": "6",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\main.h"
+    },
+    "name": "DELAY_CYCLES",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@delay_us",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void delay_us(uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "21",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\main.h"
+    },
+    "name": "delay_us",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@delay_us",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void delay_us(uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "21",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\main.h"
+    },
+    "name": "delay_us",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:init_stm.h@30@macro@__INIT_STM_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__INIT_STM_H",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.h"
+    },
+    "name": "__INIT_STM_H",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@init_rcc",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void init_rcc(void)",
+    "location": {
+      "column": "6",
+      "line": "7",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.h"
+    },
+    "name": "init_rcc",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@init_rcc",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void init_rcc(void)",
+    "location": {
+      "column": "6",
+      "line": "7",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.h"
+    },
+    "name": "init_rcc",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@init_gpio",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void init_gpio(void)",
+    "location": {
+      "column": "6",
+      "line": "8",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.h"
+    },
+    "name": "init_gpio",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@init_gpio",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void init_gpio(void)",
+    "location": {
+      "column": "6",
+      "line": "8",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.h"
+    },
+    "name": "init_gpio",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@init_tim4",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void init_tim4(void)",
+    "location": {
+      "column": "6",
+      "line": "9",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.h"
+    },
+    "name": "init_tim4",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@init_tim4",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void init_tim4(void)",
+    "location": {
+      "column": "6",
+      "line": "9",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.h"
+    },
+    "name": "init_tim4",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@init_tim2",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void init_tim2(void)",
+    "location": {
+      "column": "6",
+      "line": "10",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.h"
+    },
+    "name": "init_tim2",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@init_tim2",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void init_tim2(void)",
+    "location": {
+      "column": "6",
+      "line": "10",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.h"
+    },
+    "name": "init_tim2",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@init_tim1",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void init_tim1(void)",
+    "location": {
+      "column": "6",
+      "line": "11",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.h"
+    },
+    "name": "init_tim1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@init_tim1",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void init_tim1(void)",
+    "location": {
+      "column": "6",
+      "line": "11",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.h"
+    },
+    "name": "init_tim1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@beep_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void beep_init(uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "12",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.h"
+    },
+    "name": "beep_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@beep_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void beep_init(uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "12",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.h"
+    },
+    "name": "beep_init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@init_rcc",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void init_rcc(void)",
+    "location": {
+      "column": "6",
+      "line": "4",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.c"
+    },
+    "name": "init_rcc",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@init_gpio",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void init_gpio(void)",
+    "location": {
+      "column": "6",
+      "line": "12",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.c"
+    },
+    "name": "init_gpio",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@init_tim4",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void init_tim4(void)",
+    "location": {
+      "column": "6",
+      "line": "24",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.c"
+    },
+    "name": "init_tim4",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@init_tim2",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void init_tim2(void)",
+    "location": {
+      "column": "6",
+      "line": "32",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.c"
+    },
+    "name": "init_tim2",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@init_tim1",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void init_tim1(void)",
+    "location": {
+      "column": "6",
+      "line": "41",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.c"
+    },
+    "name": "init_tim1",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@beep_init",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void beep_init(uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "50",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\Init_stm.c"
+    },
+    "name": "beep_init",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@i",
     "What": "Variable",
     "defdec": "Def",
@@ -44482,13 +44720,27 @@
     "scope": null
   },
   {
+    "ID": "c:@tim_to_delay",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "tim_to_delay",
+    "location": {
+      "column": "9",
+      "line": "4",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\main.c"
+    },
+    "name": "tim_to_delay",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@S@flags",
     "What": "Struct",
     "defdec": "Def",
     "display": "flags",
     "location": {
       "column": "8",
-      "line": "4",
+      "line": "6",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\main.c"
     },
     "members": [
@@ -44499,7 +44751,7 @@
         "display": "flag_led",
         "location": {
           "column": "11",
-          "line": "5",
+          "line": "7",
           "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\main.c"
         },
         "name": "flag_led",
@@ -44513,7 +44765,7 @@
         "display": "flag_2",
         "location": {
           "column": "11",
-          "line": "6",
+          "line": "8",
           "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\main.c"
         },
         "name": "flag_2",
@@ -44532,7 +44784,7 @@
     "display": "flag",
     "location": {
       "column": "14",
-      "line": "9",
+      "line": "11",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\main.c"
     },
     "name": "flag",
@@ -44546,10 +44798,24 @@
     "display": "int main(void)",
     "location": {
       "column": "5",
-      "line": "11",
+      "line": "13",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\main.c"
     },
     "name": "main",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@456@F@main@_delay_counter",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "_delay_counter",
+    "location": {
+      "column": "6",
+      "line": "32",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\main.c"
+    },
+    "name": "_delay_counter",
     "origin": "project_file",
     "scope": null
   },
@@ -44574,7 +44840,7 @@
     "display": "void TIM2_OVR_UIF_Handler(void)",
     "location": {
       "column": "18",
-      "line": "42",
+      "line": "43",
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\main.c"
     },
     "name": "TIM2_OVR_UIF_Handler",
@@ -44592,6 +44858,20 @@
       "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\main.c"
     },
     "name": "TIM1_OVR_UIF_Handler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@delay_us",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void delay_us(uint8_t)",
+    "location": {
+      "column": "6",
+      "line": "55",
+      "path": "C:\\Users\\RSolovyov\\Documents\\Iar_prjct\\ADC_HX711_STM8\\main.c"
+    },
+    "name": "delay_us",
     "origin": "project_file",
     "scope": null
   }

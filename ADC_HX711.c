@@ -1,103 +1,110 @@
 #include "ADC_HX711.h" 
 
-
-uint32_t adc_value = 0;
+int32_t adc_value = 0;
 uint32_t adc_new_value = 0;
+//uint32_t filtr_adc [17];
+int8_t set_poz_bit;
 
-struct adc_union {
-  uint8_t count_sck :6;
-  uint8_t data_ok :1;
-  uint8_t high_low_sck :1;
-  uint8_t stop_adc_measurement :1;
-};
+uint32_t zero_adc = 0;
+float cal_coef = 12.54;
+float massa = 0;
+int32_t massa_int = 0;
 
-struct adc_union adc_flag = {GAIN_ADC , 0, 0, 0};
+struct adc_union adc_flag = {0 , 0, 0, 0};
 
-void init_ADC_pin (void) {
-  // SCK_PIN PD2
-  PD_DDR_DDR2 = 1;       // direction port 0 - input, 1 - output 
-  PD_CR1_C12 = 1;        // control 0 - open drein, 1 - push-pull
-  PD_CR2_C22 = 1;        // output speed 0 - 2MHz, 1 - 10MHz
-  SCK_PIN_OFF;
-  // DOUT_PIN PD1
-  PD_DDR_DDR3 = 0;       // direction port 0 - input, 1 - output 
-  PD_CR1_C13 = 1;        // control 0 - floating, 1 - Input with pull-up
-  PD_CR2_C23 = 1;        // External interrupt enabled
-  EXTI_CR1_PDIS = 2;     // inerrupt falling portD
+void ADC_pin_init (void) {
+    // SCK_PIN PC5
+  PC_DDR_DDR5 = 1;       // direction port 0 - input, 1 - output 
+  PC_CR1_C15 = 1;        // control 0 - open drein, 1 - push-pull
+  PC_CR2_C25 = 1;        // output speed 0 - 2MHz, 1 - 10MHz
+  // DOUT_PIN PC7
+  PC_DDR_DDR7 = 0;       // direction port 0 - input, 1 - output 
+  PC_CR1_C17 = 1;        // control 0 - floating, 1 - Input with pull-up
+  PC_CR2_C27 = 1;        // External interrupt enabled
+  EXTI_CR1_PCIS = 2;     // inerrupt falling portC
 }
 
-/*void read_data_ADC (void) {       // call in timer
-  if (adc_flag.data_ok) {
-    if (adc_flag.count_sck > 0) {
-      if (!adc_flag.high_low_sck) {
-        SCK_PIN_ON;
-        adc_flag.high_low_sck = true;
-      } else {
-           if (READ_DOUT && adc_flag.count_sck <= 23) {
-            adc_new_value |= (uint32_t)1 << adc_flag.count_sck;
-          } 
-          adc_flag.high_low_sck = false;
-          adc_flag.count_sck --;
-          SCK_PIN_OFF;
-      }
-    } else {
-      TIM4_IER_UIE = 0;   // interrupt disable
-      adc_flag.data_ok = false;
-      adc_flag.count_sck = GAIN_ADC;
-      adc_new_value = adc_new_value^0x800000;
-      adc_value = adc_new_value;
-      adc_new_value = 0;
-      PD_CR2_C23 = 1;        // External interrupt enabled
-    }
-  } 
-}*/
+void ADC_pin_manual (void) {
+  // DOUT_PIN PC7
+  PC_DDR_DDR7 = 0;       // direction port 0 - input, 1 - output 
+  PC_CR1_C17 = 1;        // control 0 - floating, 1 - Input with pull-up
+  PC_CR2_C27 = 1;        // External interrupt enabled
+}
 
-void read_data_ADC (void) {       // call in timer
-  if (adc_flag.data_ok) {
-    if (adc_flag.count_sck > 0) {
-      if (SCK_PIN_READ) {
-          if (READ_DOUT && (adc_flag.count_sck -1)) {
-          adc_new_value |= (uint32_t)1 << adc_flag.count_sck - 2;
-         } 
-      } else {
-          adc_flag.count_sck --;
-      }   
-      PD_ODR_ODR2 = !PD_ODR_ODR2;
-    } else {
-      TIM4_IER_UIE = 0;   // interrupt disable
-      adc_flag.data_ok = false;
-      adc_flag.count_sck = GAIN_ADC ;
-      adc_new_value = adc_new_value^0x800000;
-      adc_value = adc_new_value;
-      adc_new_value = 0;
-      SCK_PIN_OFF; 
-      PD_CR2_C23 = 1;        // External interrupt enabled
-    }
-  } 
+void ADC_pin_automat (void) {
+  // DOUT_PIN PC7
+  PC_DDR_DDR7 = 0;       // direction port 0 - input, 1 - output 
+  PC_CR1_C17 = 1;        // control 0 - floating, 1 - Input with pull-up
+  PC_CR2_C27 = 0;        // External interrupt disabled
 }
 
 
+void init_SPI_first (void) {
+  SPI_CR1_BR = 4;        // clok prescaler
+  SPI_CR1_MSTR = 1;      // master mode
+  SPI_CR1_CPHA = 1;      // clock phase
+  SPI_CR2_RXONLY = 0;    // Only recive
+}
 
-#pragma vector=EXTI3_vector  // set interrupt funcion 
+void init_SPI (void) {
+  SPI_CR1_SPE = 1;       // spi enable
+  SPI_ICR_RXIE = 1;      // interrupt enable
+}
+
+void deinit_SPI (void) {
+  SPI_CR1_SPE = 0;       // spi enable
+  SPI_ICR_RXIE = 0;      // interrupt enable
+}
+
+#pragma vector = SPI_RXNE_vector // set interrupt funcion 
+__interrupt void SPI_RXNE_Handler (void) {
+  uint32_t mirror = 0;
+  if (set_poz_bit > 0) {
+    mirror = (uint32_t) SPI_DR << set_poz_bit;
+    adc_new_value |= mirror;
+    set_poz_bit -= 8;
+    SPI_DR = 0xFF;
+  } else {
+    adc_new_value |= SPI_DR;
+    SPI_SR_RXNE = 0;
+    deinit_SPI ();
+    adc_flag.data_ok = true;
+    adc_value = adc_new_value^0x800000;
+    adc_value -= zero_adc;
+    adc_flag.adc_work = true;
+    //ADC_pin_manual();
+  }
+}
+
+#pragma vector=EXTI2_vector  // set interrupt funcion 
 __interrupt void EXTI2_Handler (void) {
   if (!READ_DOUT) {
     if (!adc_flag.stop_adc_measurement) {
-      adc_flag.data_ok = true;
-      adc_flag.high_low_sck = false;
-      TIM4_CNTR = 0;      // reset timer counter
-      TIM4_IER_UIE = 1;   // interrupt enable
+      set_poz_bit = 16;
       adc_new_value = 0;
-      PD_CR2_C23 = 0;        // External interrupt disabled
+      ADC_pin_automat();
+      init_SPI ();
+      SPI_DR = 0x11;
     }
   }
 }
 
+void massa_display (void) {
+  massa = (float)adc_value * cal_coef;
+  massa_int = (int32_t) massa;
+}
+
+void zero_set (void) {
+  zero_adc = adc_value; 
+}
+
+void new_kalib_koef (void){
+  cal_coef = (float)CAL_MASS / adc_value;
+}
+
 void stop_adc_read (uint8_t flag) {
   if (flag) {
-    adc_flag.stop_adc_measurement = true;
-    TIM4_IER_UIE = 0;
   } else {
-    adc_flag.stop_adc_measurement = false;
   }
 }
 

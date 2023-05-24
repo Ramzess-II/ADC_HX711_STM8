@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <settings>
     <DebugChecksum>
-        <Checksum>2997324291</Checksum>
+        <Checksum>3020304949</Checksum>
     </DebugChecksum>
     <Stack>
         <FillEnabled>0</FillEnabled>
@@ -77,6 +77,7 @@
     </Simulator>
     <watch_formats>
         <Fmt0>{W}42:adc_new_value	4	0</Fmt0>
+        <Fmt1>{W}42:temperature	3	0</Fmt1>
     </watch_formats>
     <DataSample>
         <LogEnabled>0</LogEnabled>

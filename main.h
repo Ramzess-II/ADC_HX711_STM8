@@ -11,6 +11,8 @@ do { \
   } \
 } while(0)
 
+   
+
 #include <iostm8s103f3.h>
 #include <stdint.h>               // library for uint8_t 
 
@@ -18,8 +20,9 @@ do { \
 #include "ADC_HX711.h" 
 #include "DS18B20.h" 
 
-void delay_us (uint8_t time);
-
+void adc_set_pulse (uint8_t pulse);
+void set_buzer (uint8_t set_qualiti, uint16_t set_duty);
+void delay_ms (uint32_t time);
 
 
 #endif /* __MAIN_H */

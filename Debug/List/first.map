@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V3.11.1.207 for STM8                     22/May/2023  16:50:21
+# IAR ELF Linker V3.11.1.207 for STM8                     24/May/2023  16:08:06
 # Copyright 2010-2019 IAR Systems AB.
 #
 #    Output file  =  
@@ -8,7 +8,7 @@
 #    Map file     =  
 #        C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\Debug\List\first.map
 #    Command line =  
-#        -f C:\Users\RSOLOV~1\AppData\Local\Temp\EW812E.tmp
+#        -f C:\Users\RSOLOV~1\AppData\Local\Temp\EW9334.tmp
 #        (C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\Debug\Obj\ADC_HX711.o
 #        C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\Debug\Obj\DS18B20.o
 #        C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\Debug\Obj\Init_stm.o
@@ -118,135 +118,148 @@ No sections matched the following patterns:
   .vregs             uninit   0x000000    0xc  vregs.o [4]
                             - 0x00000c    0xc
 
-"P2":                                     0xc
-  P2-1                        0x00000c    0xc  <Init block>
-    .near.data       inited   0x00000c    0x2  ADC_HX711.o [1]
-    .near.bss        inited   0x00000e    0x4  ADC_HX711.o [1]
-    .near.bss        inited   0x000012    0x4  ADC_HX711.o [1]
-    .near.bss        inited   0x000016    0x1  DS18B20.o [1]
-    .near.bss        inited   0x000017    0x1  main.o [1]
-                            - 0x000018    0xc
+"P2":                                    0x24
+  P2-1                        0x00000c   0x24  <Init block>
+    .near.data       inited   0x00000c    0x4  ADC_HX711.o [1]
+    .near.bss        inited   0x000010    0x4  ADC_HX711.o [1]
+    .near.bss        inited   0x000014    0x4  ADC_HX711.o [1]
+    .near.bss        inited   0x000018    0x1  ADC_HX711.o [1]
+    .near.bss        inited   0x000019    0x4  ADC_HX711.o [1]
+    .near.bss        inited   0x00001d    0x4  ADC_HX711.o [1]
+    .near.bss        inited   0x000021    0x4  ADC_HX711.o [1]
+    .near.bss        inited   0x000025    0x1  ADC_HX711.o [1]
+    .near.bss        inited   0x000026    0x1  DS18B20.o [1]
+    .near.bss        inited   0x000027    0x1  DS18B20.o [1]
+    .near.bss        inited   0x000028    0x4  main.o [1]
+    .near.bss        inited   0x00002c    0x2  main.o [1]
+    .near.bss        inited   0x00002e    0x1  main.o [1]
+    .near.bss        inited   0x00002f    0x1  main.o [1]
+                            - 0x000030   0x24
 
 "A1":                                   0x100
   CSTACK                      0x000300  0x100  <Block>
     CSTACK           uninit   0x000300  0x100  <Block tail>
                             - 0x000400  0x100
 
-Absolute sections, part 1 of 13:          0xd
-  .near.noinit       uninit   0x005007    0x1  Init_stm.o [1]
-  .near.noinit       uninit   0x005008    0x1  Init_stm.o [1]
-  .near.noinit       uninit   0x005009    0x1  Init_stm.o [1]
+Absolute sections, part 1 of 11:          0xa
   .near.noinit       uninit   0x00500a    0x1  main.o [1]
-  .near.noinit       uninit   0x00500b    0x1  DS18B20.o [1]
+  .near.noinit       uninit   0x00500b    0x1  main.o [1]
   .near.noinit       uninit   0x00500c    0x1  Init_stm.o [1]
   .near.noinit       uninit   0x00500d    0x1  Init_stm.o [1]
   .near.noinit       uninit   0x00500e    0x1  Init_stm.o [1]
-  .near.noinit       uninit   0x00500f    0x1  ADC_HX711.o [1]
-  .near.noinit       uninit   0x005010    0x1  ADC_HX711.o [1]
+  .near.noinit       uninit   0x00500f    0x1  main.o [1]
+  .near.noinit       uninit   0x005010    0x1  DS18B20.o [1]
   .near.noinit       uninit   0x005011    0x1  Init_stm.o [1]
   .near.noinit       uninit   0x005012    0x1  Init_stm.o [1]
   .near.noinit       uninit   0x005013    0x1  Init_stm.o [1]
-                            - 0x005014    0xd
+                            - 0x005014    0xa
 
-Absolute sections, part 2 of 13:          0x1
+Absolute sections, part 2 of 11:          0x1
   .near.noinit       uninit   0x0050a0    0x1  ADC_HX711.o [1]
                             - 0x0050a1    0x1
 
-Absolute sections, part 3 of 13:          0x2
+Absolute sections, part 3 of 11:          0x2
   .near.noinit       uninit   0x0050c6    0x1  Init_stm.o [1]
   .near.noinit       uninit   0x0050c7    0x1  Init_stm.o [1]
                             - 0x0050c8    0x2
 
-Absolute sections, part 4 of 13:          0x1
+Absolute sections, part 4 of 11:          0x1
   .near.noinit       uninit   0x0050f3    0x1  Init_stm.o [1]
                             - 0x0050f4    0x1
 
-Absolute sections, part 5 of 13:          0x1
+Absolute sections, part 5 of 11:          0x5
+  .near.noinit       uninit   0x005200    0x1  ADC_HX711.o [1]
+  .near.noinit       uninit   0x005201    0x1  ADC_HX711.o [1]
+  .near.noinit       uninit   0x005202    0x1  ADC_HX711.o [1]
+  .near.noinit       uninit   0x005203    0x1  ADC_HX711.o [1]
+  .near.noinit       uninit   0x005204    0x1  ADC_HX711.o [1]
+                            - 0x005205    0x5
+
+Absolute sections, part 6 of 11:          0x1
   .near.noinit       uninit   0x005250    0x1  Init_stm.o [1]
                             - 0x005251    0x1
 
-Absolute sections, part 6 of 13:          0x2
-  .near.noinit       uninit   0x005254    0x1  main.o [1]
+Absolute sections, part 7 of 11:          0x2
+  .near.noinit       uninit   0x005254    0x1  Init_stm.o [1]
   .near.noinit       uninit   0x005255    0x1  main.o [1]
                             - 0x005256    0x2
 
-Absolute sections, part 7 of 13:          0x5
-  .near.noinit       uninit   0x00525f    0x1  main.o [1]
+Absolute sections, part 8 of 11:          0x4
   .near.noinit       uninit   0x005260    0x1  Init_stm.o [1]
   .near.noinit       uninit   0x005261    0x1  Init_stm.o [1]
   .near.noinit       uninit   0x005262    0x1  Init_stm.o [1]
   .near.noinit       uninit   0x005263    0x1  Init_stm.o [1]
-                            - 0x005264    0x5
+                            - 0x005264    0x4
 
-Absolute sections, part 8 of 13:          0x1
+Absolute sections, part 9 of 11:          0x1
   .near.noinit       uninit   0x005300    0x1  Init_stm.o [1]
                             - 0x005301    0x1
 
-Absolute sections, part 9 of 13:          0x1
+Absolute sections, part 10 of 11:         0x2
+  .near.noinit       uninit   0x005303    0x1  main.o [1]
   .near.noinit       uninit   0x005304    0x1  main.o [1]
-                            - 0x005305    0x1
+                            - 0x005305    0x2
 
-Absolute sections, part 10 of 13:         0x3
+Absolute sections, part 11 of 11:         0x5
+  .near.noinit       uninit   0x00530c    0x1  main.o [1]
+  .near.noinit       uninit   0x00530d    0x1  main.o [1]
   .near.noinit       uninit   0x00530e    0x1  Init_stm.o [1]
-  .near.noinit       uninit   0x00530f    0x1  Init_stm.o [1]
-  .near.noinit       uninit   0x005310    0x1  Init_stm.o [1]
-                            - 0x005311    0x3
-
-Absolute sections, part 11 of 13:         0x1
-  .near.noinit       uninit   0x005340    0x1  Init_stm.o [1]
-                            - 0x005341    0x1
-
-Absolute sections, part 12 of 13:         0x2
-  .near.noinit       uninit   0x005343    0x1  ADC_HX711.o [1]
-  .near.noinit       uninit   0x005344    0x1  main.o [1]
-                            - 0x005345    0x2
-
-Absolute sections, part 13 of 13:         0x3
-  .near.noinit       uninit   0x005346    0x1  ADC_HX711.o [1]
-  .near.noinit       uninit   0x005347    0x1  Init_stm.o [1]
-  .near.noinit       uninit   0x005348    0x1  Init_stm.o [1]
-                            - 0x005349    0x3
+  .near.noinit       uninit   0x00530f    0x1  main.o [1]
+  .near.noinit       uninit   0x005310    0x1  main.o [1]
+                            - 0x005311    0x5
 
 "A2":                                    0x80
   INTVEC                      0x008000   0x80  <Block>
     .intvec          const    0x008000   0x80  interrupt.o [4]
                             - 0x008080   0x80
 
-"P3-P5":                                0x3c7
-  .near_func.text    ro code  0x008080   0xc3  ADC_HX711.o [1]
-  .near_func.text    ro code  0x008143   0x5d  vreg_util.o [4]
-  .near_func.text    ro code  0x0081a0   0x41  long.o [4]
-  .near_func.text    ro code  0x0081e1   0x3b  main.o [1]
-  .near_func.text    ro code  0x00821c   0x2e  ADC_HX711.o [1]
-  .near_func.text    ro code  0x00824a   0x2b  DS18B20.o [1]
-  .near_func.text    ro code  0x008275   0x28  init_small.o [4]
-  .near_func.text    ro code  0x00829d   0x27  ADC_HX711.o [1]
-  .near_func.text    ro code  0x0082c4   0x21  Init_stm.o [1]
-  .iar.init_table    const    0x0082e5    0xa  - Linker created -
-  .near_func.text    ro code  0x0082ef   0x1d  DS18B20.o [1]
-  .near_func.text    ro code  0x00830c   0x1a  main.o [1]
-  .near_func.text    ro code  0x008326   0x1a  long_util.o [4]
-  .near_func.text    ro code  0x008340   0x19  ADC_HX711.o [1]
-  .near_func.text    ro code  0x008359   0x19  Init_stm.o [1]
-  .near_func.text    ro code  0x008372   0x15  Init_stm.o [1]
-  .near_func.text    ro code  0x008387   0x15  Init_stm.o [1]
-  .near_func.text    ro code  0x00839c   0x15  main.o [1]
-  .near_func.text    ro code  0x0083b1   0x14  init.o [4]
-  .near_func.text    ro code  0x0083c5   0x14  __dbg_xxexit.o [3]
-  .near_func.text    ro code  0x0083d9   0x13  Init_stm.o [1]
-  .near_func.text    ro code  0x0083ec   0x13  cstartup.o [4]
-  .near_func.text    ro code  0x0083ff   0x12  main.o [1]
-  .near_func.text    ro code  0x008411    0xd  Init_stm.o [1]
-  Initializer bytes  const    0x00841e    0xc  <for P2-1>
-  .near_func.text    ro code  0x00842a    0x6  char.o [4]
-  .near_func.text    ro code  0x008430    0x5  main.o [1]
-  .near_func.text    ro code  0x008435    0x5  cexit.o [4]
-  .near_func.text    ro code  0x00843a    0x3  interrupt.o [4]
-  .near_func.text    ro code  0x00843d    0x3  low_level_init.o [4]
-  .near_func.text    ro code  0x008440    0x3  exit.o [4]
-  .near_func.text    ro code  0x008443    0x3  unhandled_exception.o [4]
-  .near_func.text    ro code  0x008446    0x1  __dbg_break.o [3]
-                            - 0x008447  0x3c7
+"P3-P5":                                0xa51
+  .near_func.text    ro code  0x008080  0x302  float.o [4]
+  .near_func.text    ro code  0x008382  0x12b  main.o [1]
+  .near_func.text    ro code  0x0084ad   0x97  DS18B20.o [1]
+  .near_func.text    ro code  0x008544   0x92  ADC_HX711.o [1]
+  .near_func.text    ro code  0x0085d6   0x8a  vreg_util.o [4]
+  .near_func.text    ro code  0x008660   0x82  long.o [4]
+  .near_func.text    ro code  0x0086e2   0x56  main.o [1]
+  .near_func.text    ro code  0x008738   0x4c  DS18B20.o [1]
+  .near_func.text    ro code  0x008784   0x4b  main.o [1]
+  .near_func.text    ro code  0x0087cf   0x43  main.o [1]
+  .near_func.text    ro code  0x008812   0x40  DS18B20.o [1]
+  .near_func.text    ro code  0x008852   0x2e  ADC_HX711.o [1]
+  .near_func.text    ro code  0x008880   0x28  init_small.o [4]
+  .near_func.text    ro code  0x0088a8   0x24  ADC_HX711.o [1]
+  Initializer bytes  const    0x0088cc   0x24  <for P2-1>
+  .near_func.text    ro code  0x0088f0   0x23  ADC_HX711.o [1]
+  .iar.init_table    const    0x008913    0xa  - Linker created -
+  .near_func.text    ro code  0x00891d   0x1d  DS18B20.o [1]
+  .near_func.text    ro code  0x00893a   0x1d  Init_stm.o [1]
+  .near_func.text    ro code  0x008957   0x1d  Init_stm.o [1]
+  .near_func.text    ro code  0x008974   0x1d  main.o [1]
+  .near_func.text    ro code  0x008991   0x1b  main.o [1]
+  .near_func.text    ro code  0x0089ac   0x1a  long_util.o [4]
+  .near_func.text    ro code  0x0089c6   0x19  ADC_HX711.o [1]
+  .near_func.text    ro code  0x0089df   0x19  Init_stm.o [1]
+  .near_func.text    ro code  0x0089f8   0x17  ADC_HX711.o [1]
+  .near_func.text    ro code  0x008a0f   0x15  Init_stm.o [1]
+  .near_func.text    ro code  0x008a24   0x14  init.o [4]
+  .near_func.text    ro code  0x008a38   0x14  __dbg_xxexit.o [3]
+  .near_func.text    ro code  0x008a4c   0x13  cstartup.o [4]
+  .near_func.text    ro code  0x008a5f    0xd  ADC_HX711.o [1]
+  .near_func.text    ro code  0x008a6c    0xd  ADC_HX711.o [1]
+  .near_func.text    ro code  0x008a79    0xd  Init_stm.o [1]
+  .near_func.text    ro code  0x008a86    0xd  Init_stm.o [1]
+  .near_func.text    ro code  0x008a93    0xd  dc_util.o [4]
+  .near_func.text    ro code  0x008aa0    0xc  ADC_HX711.o [1]
+  .near_func.text    ro code  0x008aac    0x9  ADC_HX711.o [1]
+  .near_func.text    ro code  0x008ab5    0x9  ADC_HX711.o [1]
+  .near_func.text    ro code  0x008abe    0x5  cexit.o [4]
+  .near_func.text    ro code  0x008ac3    0x3  interrupt.o [4]
+  .near_func.text    ro code  0x008ac6    0x3  low_level_init.o [4]
+  .near_func.text    ro code  0x008ac9    0x3  exit.o [4]
+  .near_func.text    ro code  0x008acc    0x3  unhandled_exception.o [4]
+  .near_func.text    ro code  0x008acf    0x1  ADC_HX711.o [1]
+  .near_func.text    ro code  0x008ad0    0x1  __dbg_break.o [3]
+                            - 0x008ad1  0xa51
 
 
 *******************************************************************************
@@ -256,10 +269,10 @@ Absolute sections, part 13 of 13:         0x3
           Address   Size
           -------   ----
 Copy (__iar_copy_init2)
-    1 source range, total size 0xc:
-          0x00841e   0xc
-    1 destination range, total size 0xc:
-          0x00000c   0xc
+    1 source range, total size 0x24:
+          0x0088cc  0x24
+    1 destination range, total size 0x24:
+          0x00000c  0x24
 
 
 
@@ -271,12 +284,12 @@ Copy (__iar_copy_init2)
                                                        (abs)
     ------                 -------  -------  -------  -------
 C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\Debug\Obj: [1]
-    ADC_HX711.o                305       10       10        5
-    DS18B20.o                   72        1        1        1
-    Init_stm.o                 132                         24
-    main.o                     129        1        1        6
+    ADC_HX711.o                368       26       26        6
+    DS18B20.o                  320        2        2        1
+    Init_stm.o                 130                         17
+    main.o                     583        8        8       10
     ---------------------------------------------------------
-    Total:                     638       12       12       36
+    Total:                   1 401       36       36       34
 
 command line: [2]
     ---------------------------------------------------------
@@ -290,150 +303,188 @@ dbgstm8smd.a: [3]
 
 dlstm8smn.a: [4]
     cexit.o                      5
-    char.o                       6
     cstartup.o                  19
+    dc_util.o                   13
     exit.o                       3
+    float.o                    770
     init.o                      20
     init_small.o                40
     interrupt.o                  3      128
-    long.o                      65
+    long.o                     130
     long_util.o                 26
     low_level_init.o             3
     unhandled_exception.o        3
-    vreg_util.o                 93
+    vreg_util.o                138
     vregs.o                                       12
     ---------------------------------------------------------
-    Total:                     286      128       12
+    Total:                   1 173      128       12
 
     Linker created                       10      256
 -------------------------------------------------------------
-    Grand Total:               945      150      280       36
+    Grand Total:             2 595      174      304       34
 
 
 *******************************************************************************
 *** ENTRY LIST
 ***
 
-Entry                    Address  Size  Type      Object
------                    -------  ----  ----      ------
-.iar.init_table$$Base   0x0082e5         --   Gb  - Linker created -
-.iar.init_table$$Limit  0x0082ef         --   Gb  - Linker created -
-?b0                     0x000000        Data  Gb  vregs.o [4]
-?b1                     0x000001        Data  Gb  vregs.o [4]
-?b10                    0x00000a        Data  Gb  vregs.o [4]
-?b11                    0x00000b        Data  Gb  vregs.o [4]
-?b2                     0x000002        Data  Gb  vregs.o [4]
-?b3                     0x000003        Data  Gb  vregs.o [4]
-?b4                     0x000004        Data  Gb  vregs.o [4]
-?b5                     0x000005        Data  Gb  vregs.o [4]
-?b6                     0x000006        Data  Gb  vregs.o [4]
-?b7                     0x000007        Data  Gb  vregs.o [4]
-?b8                     0x000008        Data  Gb  vregs.o [4]
-?b9                     0x000009        Data  Gb  vregs.o [4]
-?e0                     0x000001        Data  Gb  vregs.o [4]
-?e1                     0x000005        Data  Gb  vregs.o [4]
-?e2                     0x000009        Data  Gb  vregs.o [4]
-?l0                     0x000000        Data  Gb  vregs.o [4]
-?l1                     0x000004        Data  Gb  vregs.o [4]
-?l2                     0x000008        Data  Gb  vregs.o [4]
-?load32_0x_l0           0x008332        Code  Gb  long_util.o [4]
-?load32_l0_0x           0x008326        Code  Gb  long_util.o [4]
-?or32_l0_l0_0x          0x0081a0        Code  Gb  long.o [4]
-?pop_l0                 0x008182        Code  Gb  vreg_util.o [4]
-?pop_l1                 0x00818d        Code  Gb  vreg_util.o [4]
-?push_l0                0x00815b        Code  Gb  vreg_util.o [4]
-?push_l1                0x008160        Code  Gb  vreg_util.o [4]
-?push_w4                0x008143        Code  Gb  vreg_util.o [4]
-?sll32_0x_0x_a          0x0081d3        Code  Gb  long.o [4]
-?sll32_l0_l0_a          0x0081d0        Code  Gb  long.o [4]
-?srl8_a_a_5             0x00842b        Code  Gb  char.o [4]
-?srl8_a_a_6             0x00842a        Code  Gb  char.o [4]
-?w0                     0x000000        Data  Gb  vregs.o [4]
-?w1                     0x000002        Data  Gb  vregs.o [4]
-?w2                     0x000004        Data  Gb  vregs.o [4]
-?w3                     0x000006        Data  Gb  vregs.o [4]
-?w4                     0x000008        Data  Gb  vregs.o [4]
-?w5                     0x00000a        Data  Gb  vregs.o [4]
-?xor32_l0_l0_0x         0x0081b8        Code  Gb  long.o [4]
-CLK_PCKENR1             0x0050c7   0x1  Data  Gb  Init_stm.o [1]
-CSTACK$$Base            0x000300         --   Gb  - Linker created -
-CSTACK$$Limit           0x000400         --   Gb  - Linker created -
-DS18B20_flag            0x000016   0x1  Data  Gb  DS18B20.o [1]
-EXTI2_Handler           0x00821c  0x2e  Code  Gb  ADC_HX711.o [1]
-INTVEC$$Base            0x008000         --   Gb  - Linker created -
-INTVEC$$Limit           0x008080         --   Gb  - Linker created -
-Region$$Table$$Base     0x0082e5         --   Gb  - Linker created -
-Region$$Table$$Limit    0x0082ef         --   Gb  - Linker created -
-TIM1_ARRH               0x005262   0x1  Data  Gb  Init_stm.o [1]
-TIM1_ARRL               0x005263   0x1  Data  Gb  Init_stm.o [1]
-TIM1_CNTRL              0x00525f   0x1  Data  Gb  main.o [1]
-TIM1_OVR_UIF_Handler    0x00839c  0x15  Code  Gb  main.o [1]
-TIM1_PSCRH              0x005260   0x1  Data  Gb  Init_stm.o [1]
-TIM1_PSCRL              0x005261   0x1  Data  Gb  Init_stm.o [1]
-TIM2_ARRH               0x00530f   0x1  Data  Gb  Init_stm.o [1]
-TIM2_ARRL               0x005310   0x1  Data  Gb  Init_stm.o [1]
-TIM2_OVR_UIF_Handler    0x008430   0x5  Code  Gb  main.o [1]
-TIM4_ARR                0x005348   0x1  Data  Gb  Init_stm.o [1]
-TIM4_CNTR               0x005346   0x1  Data  Gb  ADC_HX711.o [1]
-TIM4_OVR_UIF_Handler    0x00830c  0x1a  Code  Gb  main.o [1]
-_A_BEEP_CSR             0x0050f3   0x1  Data  Gb  Init_stm.o [1]
-_A_CLK_CKDIVR           0x0050c6   0x1  Data  Gb  Init_stm.o [1]
-_A_EXTI_CR1             0x0050a0   0x1  Data  Gb  ADC_HX711.o [1]
-_A_PB_CR1               0x005008   0x1  Data  Gb  Init_stm.o [1]
-_A_PB_CR2               0x005009   0x1  Data  Gb  Init_stm.o [1]
-_A_PB_DDR               0x005007   0x1  Data  Gb  Init_stm.o [1]
-_A_PC_CR1               0x00500d   0x1  Data  Gb  Init_stm.o [1]
-_A_PC_CR2               0x00500e   0x1  Data  Gb  Init_stm.o [1]
-_A_PC_DDR               0x00500c   0x1  Data  Gb  Init_stm.o [1]
-_A_PC_IDR               0x00500b   0x1  Data  Gb  DS18B20.o [1]
-_A_PC_ODR               0x00500a   0x1  Data  Gb  main.o [1]
-_A_PD_CR1               0x005012   0x1  Data  Gb  Init_stm.o [1]
-_A_PD_CR2               0x005013   0x1  Data  Gb  Init_stm.o [1]
-_A_PD_DDR               0x005011   0x1  Data  Gb  Init_stm.o [1]
-_A_PD_IDR               0x005010   0x1  Data  Gb  ADC_HX711.o [1]
-_A_PD_ODR               0x00500f   0x1  Data  Gb  ADC_HX711.o [1]
-_A_TIM1_CR1             0x005250   0x1  Data  Gb  Init_stm.o [1]
-_A_TIM1_IER             0x005254   0x1  Data  Gb  main.o [1]
-_A_TIM1_SR1             0x005255   0x1  Data  Gb  main.o [1]
-_A_TIM2_CR1             0x005300   0x1  Data  Gb  Init_stm.o [1]
-_A_TIM2_PSCR            0x00530e   0x1  Data  Gb  Init_stm.o [1]
-_A_TIM2_SR1             0x005304   0x1  Data  Gb  main.o [1]
-_A_TIM4_CR1             0x005340   0x1  Data  Gb  Init_stm.o [1]
-_A_TIM4_IER             0x005343   0x1  Data  Gb  ADC_HX711.o [1]
-_A_TIM4_PSCR            0x005347   0x1  Data  Gb  Init_stm.o [1]
-_A_TIM4_SR              0x005344   0x1  Data  Gb  main.o [1]
-__DebugBreak            0x008446   0x1  Code  Gb  __dbg_break.o [3]
-__exit                  0x0083c5  0x14  Code  Gb  __dbg_xxexit.o [3]
-__iar_copy_init2        0x008275        Code  Gb  init_small.o [4]
-__iar_data_init2        0x0083b1  0x14  Code  Gb  init.o [4]
-__iar_program_start     0x0083ec        Code  Gb  cstartup.o [4]
+Entry                    Address   Size  Type      Object
+-----                    -------   ----  ----      ------
+.iar.init_table$$Base   0x008913          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x00891d          --   Gb  - Linker created -
+?b0                     0x000000         Data  Gb  vregs.o [4]
+?b1                     0x000001         Data  Gb  vregs.o [4]
+?b10                    0x00000a         Data  Gb  vregs.o [4]
+?b11                    0x00000b         Data  Gb  vregs.o [4]
+?b2                     0x000002         Data  Gb  vregs.o [4]
+?b3                     0x000003         Data  Gb  vregs.o [4]
+?b4                     0x000004         Data  Gb  vregs.o [4]
+?b5                     0x000005         Data  Gb  vregs.o [4]
+?b6                     0x000006         Data  Gb  vregs.o [4]
+?b7                     0x000007         Data  Gb  vregs.o [4]
+?b8                     0x000008         Data  Gb  vregs.o [4]
+?b9                     0x000009         Data  Gb  vregs.o [4]
+?dc32_l0                0x008a93         Code  Gb  dc_util.o [4]
+?dec32_0x_0x            0x008675         Code  Gb  long.o [4]
+?dec32_l0_l0            0x008670         Code  Gb  long.o [4]
+?e0                     0x000001         Data  Gb  vregs.o [4]
+?e1                     0x000005         Data  Gb  vregs.o [4]
+?e2                     0x000009         Data  Gb  vregs.o [4]
+?epilogue_w4            0x008642         Code  Gb  vreg_util.o [4]
+?fcastf32s32_l0_l0      0x008232         Code  Gb  float.o [4]
+?fcasts32f32_l0_l0      0x0081d1         Code  Gb  float.o [4]
+?fdiv32_l0_dc32_l1      0x00811e         Code  Gb  float.o [4]
+?fdiv32_l0_l0_l1        0x008123         Code  Gb  float.o [4]
+?fmul32_l0_l0_0x        0x008080         Code  Gb  float.o [4]
+?fmul32_l0_l0_l1        0x008083         Code  Gb  float.o [4]
+?l0                     0x000000         Data  Gb  vregs.o [4]
+?l1                     0x000004         Data  Gb  vregs.o [4]
+?l2                     0x000008         Data  Gb  vregs.o [4]
+?load32_0x_l0           0x0089b8         Code  Gb  long_util.o [4]
+?load32_l0_0x           0x0089ac         Code  Gb  long_util.o [4]
+?mov_e0_e1              0x008649         Code  Gb  vreg_util.o [4]
+?mov_e1_e0              0x008656         Code  Gb  vreg_util.o [4]
+?mov_l0_l1              0x008646         Code  Gb  vreg_util.o [4]
+?mov_l1_l0              0x008653         Code  Gb  vreg_util.o [4]
+?mov_w1_w3              0x00864c         Code  Gb  vreg_util.o [4]
+?mov_w3_w1              0x008659         Code  Gb  vreg_util.o [4]
+?neg32_l0_l0            0x008660         Code  Gb  long.o [4]
+?or32_l0_l0_0x          0x0086a1         Code  Gb  long.o [4]
+?pop_l0                 0x008624         Code  Gb  vreg_util.o [4]
+?pop_l1                 0x00862f         Code  Gb  vreg_util.o [4]
+?pop_w4                 0x0085ee         Code  Gb  vreg_util.o [4]
+?push_l0                0x0085fd         Code  Gb  vreg_util.o [4]
+?push_l1                0x008602         Code  Gb  vreg_util.o [4]
+?push_w4                0x0085d6         Code  Gb  vreg_util.o [4]
+?sll32_0x_0x_a          0x0086d4         Code  Gb  long.o [4]
+?sll32_l0_l0_a          0x0086d1         Code  Gb  long.o [4]
+?sub32_l0_l0_0x         0x008689         Code  Gb  long.o [4]
+?w0                     0x000000         Data  Gb  vregs.o [4]
+?w1                     0x000002         Data  Gb  vregs.o [4]
+?w2                     0x000004         Data  Gb  vregs.o [4]
+?w3                     0x000006         Data  Gb  vregs.o [4]
+?w4                     0x000008         Data  Gb  vregs.o [4]
+?w5                     0x00000a         Data  Gb  vregs.o [4]
+?xor32_l0_l0_0x         0x0086b9         Code  Gb  long.o [4]
+ADC_pin_automat         0x008a6c    0xd  Code  Gb  ADC_HX711.o [1]
+ADC_pin_init            0x0088f0   0x23  Code  Gb  ADC_HX711.o [1]
+ADC_pin_manual          0x008a5f    0xd  Code  Gb  ADC_HX711.o [1]
+CLK_PCKENR1             0x0050c7    0x1  Data  Gb  Init_stm.o [1]
+CSTACK$$Base            0x000300          --   Gb  - Linker created -
+CSTACK$$Limit           0x000400          --   Gb  - Linker created -
+DS18B20_flag            0x000027    0x1  Data  Gb  DS18B20.o [1]
+EXTI2_Handler           0x008852   0x2e  Code  Gb  ADC_HX711.o [1]
+INTVEC$$Base            0x008000          --   Gb  - Linker created -
+INTVEC$$Limit           0x008080          --   Gb  - Linker created -
+Region$$Table$$Base     0x008913          --   Gb  - Linker created -
+Region$$Table$$Limit    0x00891d          --   Gb  - Linker created -
+SPI_DR                  0x005204    0x1  Data  Gb  ADC_HX711.o [1]
+SPI_RXNE_Handler        0x008544   0x92  Code  Gb  ADC_HX711.o [1]
+TIM1_ARRH               0x005262    0x1  Data  Gb  Init_stm.o [1]
+TIM1_ARRL               0x005263    0x1  Data  Gb  Init_stm.o [1]
+TIM1_OVR_UIF_Handler    0x008784   0x4b  Code  Gb  main.o [1]
+TIM1_PSCRH              0x005260    0x1  Data  Gb  Init_stm.o [1]
+TIM1_PSCRL              0x005261    0x1  Data  Gb  Init_stm.o [1]
+TIM2_ARRH               0x00530f    0x1  Data  Gb  main.o [1]
+TIM2_ARRL               0x005310    0x1  Data  Gb  main.o [1]
+TIM2_CNTRH              0x00530c    0x1  Data  Gb  main.o [1]
+TIM2_CNTRL              0x00530d    0x1  Data  Gb  main.o [1]
+TIM2_OVR_UIF_Handler    0x0086e2   0x56  Code  Gb  main.o [1]
+_A_BEEP_CSR             0x0050f3    0x1  Data  Gb  Init_stm.o [1]
+_A_CLK_CKDIVR           0x0050c6    0x1  Data  Gb  Init_stm.o [1]
+_A_EXTI_CR1             0x0050a0    0x1  Data  Gb  ADC_HX711.o [1]
+_A_PC_CR1               0x00500d    0x1  Data  Gb  Init_stm.o [1]
+_A_PC_CR2               0x00500e    0x1  Data  Gb  Init_stm.o [1]
+_A_PC_DDR               0x00500c    0x1  Data  Gb  Init_stm.o [1]
+_A_PC_IDR               0x00500b    0x1  Data  Gb  main.o [1]
+_A_PC_ODR               0x00500a    0x1  Data  Gb  main.o [1]
+_A_PD_CR1               0x005012    0x1  Data  Gb  Init_stm.o [1]
+_A_PD_CR2               0x005013    0x1  Data  Gb  Init_stm.o [1]
+_A_PD_DDR               0x005011    0x1  Data  Gb  Init_stm.o [1]
+_A_PD_IDR               0x005010    0x1  Data  Gb  DS18B20.o [1]
+_A_PD_ODR               0x00500f    0x1  Data  Gb  main.o [1]
+_A_SPI_CR1              0x005200    0x1  Data  Gb  ADC_HX711.o [1]
+_A_SPI_CR2              0x005201    0x1  Data  Gb  ADC_HX711.o [1]
+_A_SPI_ICR              0x005202    0x1  Data  Gb  ADC_HX711.o [1]
+_A_SPI_SR               0x005203    0x1  Data  Gb  ADC_HX711.o [1]
+_A_TIM1_CR1             0x005250    0x1  Data  Gb  Init_stm.o [1]
+_A_TIM1_IER             0x005254    0x1  Data  Gb  Init_stm.o [1]
+_A_TIM1_SR1             0x005255    0x1  Data  Gb  main.o [1]
+_A_TIM2_CR1             0x005300    0x1  Data  Gb  Init_stm.o [1]
+_A_TIM2_IER             0x005303    0x1  Data  Gb  main.o [1]
+_A_TIM2_PSCR            0x00530e    0x1  Data  Gb  Init_stm.o [1]
+_A_TIM2_SR1             0x005304    0x1  Data  Gb  main.o [1]
+__DebugBreak            0x008ad0    0x1  Code  Gb  __dbg_break.o [3]
+__exit                  0x008a38   0x14  Code  Gb  __dbg_xxexit.o [3]
+__iar_copy_init2        0x008880         Code  Gb  init_small.o [4]
+__iar_data_init2        0x008a24   0x14  Code  Gb  init.o [4]
+__iar_program_start     0x008a4c         Code  Gb  cstartup.o [4]
 __iar_unhandled_exception
-                        0x008443        Code  Gb  unhandled_exception.o [4]
-__intvec                0x008000        Data  Gb  interrupt.o [4]
-__low_level_init        0x00843d   0x3  Code  Gb  low_level_init.o [4]
-_exit                   0x008435        Code  Gb  cexit.o [4]
-_interrupt_13           0x00839c        Code  Gb  main.o [1]
-_interrupt_15           0x008430        Code  Gb  main.o [1]
-_interrupt_25           0x00830c        Code  Gb  main.o [1]
-_interrupt_8            0x00821c        Code  Gb  ADC_HX711.o [1]
-adc_flag                0x00000c   0x2  Data  Gb  ADC_HX711.o [1]
-adc_new_value           0x000012   0x4  Data  Gb  ADC_HX711.o [1]
-adc_value               0x00000e   0x4  Data  Gb  ADC_HX711.o [1]
-beep_init               0x0082c4  0x21  Code  Gb  Init_stm.o [1]
-delay_us                0x0083ff  0x12  Code  Gb  main.o [1]
-exit                    0x008440   0x3  Code  Gb  exit.o [4]
-init_ADC_pin            0x00829d  0x27  Code  Gb  ADC_HX711.o [1]
-init_DS18B20_pin        0x0082ef  0x1d  Code  Gb  DS18B20.o [1]
-init_gpio               0x008359  0x19  Code  Gb  Init_stm.o [1]
-init_rcc                0x008411   0xd  Code  Gb  Init_stm.o [1]
-init_sensor_DS18B20     0x00824a  0x2b  Code  Gb  DS18B20.o [1]
-init_tim1               0x008387  0x15  Code  Gb  Init_stm.o [1]
-init_tim2               0x008372  0x15  Code  Gb  Init_stm.o [1]
-init_tim4               0x0083d9  0x13  Code  Gb  Init_stm.o [1]
-main                    0x0081e1  0x3b  Code  Gb  main.o [1]
-read_data_ADC           0x008080  0xc3  Code  Gb  ADC_HX711.o [1]
-stop_adc_read           0x008340  0x19  Code  Gb  ADC_HX711.o [1]
-tim_to_delay            0x000017   0x1  Data  Gb  main.o [1]
+                        0x008acc         Code  Gb  unhandled_exception.o [4]
+__intvec                0x008000         Data  Gb  interrupt.o [4]
+__low_level_init        0x008ac6    0x3  Code  Gb  low_level_init.o [4]
+_exit                   0x008abe         Code  Gb  cexit.o [4]
+_interrupt_12           0x008544         Code  Gb  ADC_HX711.o [1]
+_interrupt_13           0x008784         Code  Gb  main.o [1]
+_interrupt_15           0x0086e2         Code  Gb  main.o [1]
+_interrupt_7            0x008852         Code  Gb  ADC_HX711.o [1]
+adc_flag                0x000025    0x1  Data  Gb  ADC_HX711.o [1]
+adc_new_value           0x000014    0x4  Data  Gb  ADC_HX711.o [1]
+adc_set_pulse           0x0087cf   0x43  Code  Gb  main.o [1]
+adc_value               0x000010    0x4  Data  Gb  ADC_HX711.o [1]
+beep_init               0x008957   0x1d  Code  Gb  Init_stm.o [1]
+beep_set                0x008a86    0xd  Code  Gb  Init_stm.o [1]
+cal_coef                0x00000c    0x4  Data  Gb  ADC_HX711.o [1]
+count_buzer             0x00002e    0x1  Data  Gb  main.o [1]
+deinit_SPI              0x008ab5    0x9  Code  Gb  ADC_HX711.o [1]
+delay_ms                0x008991   0x1b  Code  Gb  main.o [1]
+delay_ms_t              0x000028    0x4  Data  Gb  main.o [1]
+exit                    0x008ac9    0x3  Code  Gb  exit.o [4]
+flag                    0x00002f    0x1  Data  Gb  main.o [1]
+init_DS18B20_pin        0x00891d   0x1d  Code  Gb  DS18B20.o [1]
+init_SPI                0x008aac    0x9  Code  Gb  ADC_HX711.o [1]
+init_SPI_first          0x0089f8   0x17  Code  Gb  ADC_HX711.o [1]
+init_gpio               0x00893a   0x1d  Code  Gb  Init_stm.o [1]
+init_rcc                0x008a79    0xd  Code  Gb  Init_stm.o [1]
+init_sensor_DS18B20     0x008812   0x40  Code  Gb  DS18B20.o [1]
+init_tim1               0x0089df   0x19  Code  Gb  Init_stm.o [1]
+init_tim2               0x008a0f   0x15  Code  Gb  Init_stm.o [1]
+main                    0x008382  0x12b  Code  Gb  main.o [1]
+massa                   0x00001d    0x4  Data  Gb  ADC_HX711.o [1]
+massa_display           0x0088a8   0x24  Code  Gb  ADC_HX711.o [1]
+massa_int               0x000021    0x4  Data  Gb  ADC_HX711.o [1]
+new_kalib_koef          0x0089c6   0x19  Code  Gb  ADC_HX711.o [1]
+read_DS18B20            0x008738   0x4c  Code  Gb  DS18B20.o [1]
+read_temp               0x008503   0x34  Code  Gb  DS18B20.o [1]
+set_buzer               0x008974   0x1d  Code  Gb  main.o [1]
+set_poz_bit             0x000018    0x1  Data  Gb  ADC_HX711.o [1]
+start_conversion        0x008537    0xd  Code  Gb  DS18B20.o [1]
+stop_adc_read           0x008acf    0x1  Code  Gb  ADC_HX711.o [1]
+temperature             0x000026    0x1  Data  Gb  DS18B20.o [1]
+tim_to_update_ds18b20   0x00002c    0x2  Data  Gb  main.o [1]
+write_DS18B20           0x0084ad   0x56  Code  Gb  DS18B20.o [1]
+zero_adc                0x000019    0x4  Data  Gb  ADC_HX711.o [1]
+zero_set                0x008aa0    0xc  Code  Gb  ADC_HX711.o [1]
 
 
 [1] = C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\Debug\Obj
@@ -441,9 +492,9 @@ tim_to_delay            0x000017   0x1  Data  Gb  main.o [1]
 [3] = dbgstm8smd.a
 [4] = dlstm8smn.a
 
-  945 bytes of readonly  code memory
-  150 bytes of readonly  data memory
-  280 bytes of readwrite data memory (+ 36 absolute)
+  2 595 bytes of readonly  code memory
+    174 bytes of readonly  data memory
+    304 bytes of readwrite data memory (+ 34 absolute)
 
 Errors: none
 Warnings: none

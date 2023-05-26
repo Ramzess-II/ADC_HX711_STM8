@@ -3,9 +3,8 @@
 
 #include <iostm8s103f3.h>
 #include <stdint.h>               // library for uint8_t 
+#include "delay.h"
 
-#define true            1
-#define false           0
 #define NOID 0xCC 
 #define T_CONVERT 0x44
 #define READ_DATA 0xBE

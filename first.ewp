@@ -1641,6 +1641,9 @@
             <name>$PROJ_DIR$\ADC_HX711.h</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\delay.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\DS18B20.h</name>
         </file>
         <file>
@@ -1648,6 +1651,9 @@
         </file>
         <file>
             <name>$PROJ_DIR$\main.h</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Uart.h</name>
         </file>
     </group>
     <group>
@@ -1663,6 +1669,9 @@
         </file>
         <file>
             <name>$PROJ_DIR$\main.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Uart.c</name>
         </file>
     </group>
 </project>

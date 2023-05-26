@@ -3,6 +3,7 @@
 
 #include <iostm8s103f3.h>
 #include <stdint.h>               // library for uint8_t 
+#include "delay.h"
 
 
 #define SCK_PIN_ON        PC_ODR_ODR5 = 1     // PC5
@@ -12,7 +13,7 @@
 #define GAIN_ADC 26   // 25 chanel A128, 26 chanel B64, 27 chanel B32
 #define true     1
 #define false    0
-#define CAL_MASS 1000
+#define CAL_MASS 1000   // gramm 
 
 void stop_adc_read (uint8_t flag);
 void ADC_pin_init (void) ;
@@ -23,7 +24,7 @@ void init_SPI (void);
 void deinit_SPI (void);
 void zero_set (void);
 void massa_display (void);
-void new_kalib_koef (void);
+void new_kalib_koef (int32_t cal);
 
 
 struct adc_union {

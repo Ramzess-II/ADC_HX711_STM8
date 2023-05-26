@@ -1,14 +1,12 @@
 #include "DS18B20.h" 
-#include "main.h"
-#include "ADC_HX711.h" 
 
-int8_t temperature; 
+int8_t temperature;                       // переменная для хранения температуры 
 
-struct DS18B20_union {
+struct DS18B20_union {                    // флаги управления датчиком 
   uint8_t presence :1;
 };
 
-struct DS18B20_union DS18B20_flag = {0};
+struct DS18B20_union DS18B20_flag = {0};  // инициализация 
 
 void init_DS18B20_pin (void) {
   // OUT_DATA
@@ -22,20 +20,18 @@ void init_DS18B20_pin (void) {
   PD_CR2_C23 = 0;        // External interrupt enabled
 }
 
-void init_sensor_DS18B20 (void) {
-  stop_adc_read(true);
-  DS_PIN_OUT_OFF;
-  DELAY_CYCLES(1248);
-  DS_PIN_OUT_ON;
-  DELAY_CYCLES(208);
-  if (DS_PIN_READ) {
-    DS18B20_flag.presence = true;
+void init_sensor_DS18B20 (void) {     // инициализация старта обмена данными с датчиком DS18B20
+  DS_PIN_OUT_OFF;                     // пин на землю       
+  DELAY_CYCLES(1248);                 // ждем 480us * на 2,6
+  DS_PIN_OUT_ON;                      // отпускаем пин
+  DELAY_CYCLES(208);                  // ждем 80 us 
+  if (DS_PIN_READ) {                  // читаем пин
+    DS18B20_flag.presence = true;     // если датчик ответил поднимем флаг
   }
-  stop_adc_read(false);
-  DELAY_CYCLES(1000);
+  DELAY_CYCLES(1000);                 // подождем еще чтоб закончить старт 
 }
 
-uint8_t read_DS18B20 (void) {
+uint8_t read_DS18B20 (void) {         // чтение байта с датчика DS18B20
   uint8_t data;
   for (int i = 0; i < 8; i++) {
         DS_PIN_OUT_OFF;
@@ -68,29 +64,42 @@ void write_DS18B20 (uint8_t data) {
   }
 }
 
-void read_temp (void) {
-  uint8_t lsb = 0;
-  uint8_t msb = 0;
-  init_sensor_DS18B20();
-  write_DS18B20 (NOID);
-  write_DS18B20 (READ_DATA);
-  lsb = read_DS18B20();
-  msb = read_DS18B20();
-  temperature = (uint8_t) (lsb >> 4) | (msb << 4);
+void read_temp (void) {              // считать регистры с датчика DS18B20 (можно читать или все 9 бит или остановить в любой момент, допустим после 2х ) 
+  uint8_t lsb = 0;                   // переменная для младшего байта 
+  uint8_t msb = 0;                   // переменная для старшего байта 
+  init_sensor_DS18B20();             // инициализируем обмен с датчиком 
+  write_DS18B20 (NOID);              // отправим команду пропуска проверки серийного номера
+  write_DS18B20 (READ_DATA);         // отправим команду чтения с датчика 
+  lsb = read_DS18B20();              // считаем младший байт
+  msb = read_DS18B20();              // считаем старший байт
+  temperature = (uint8_t) (lsb >> 4) | (msb << 4);    // удалим лишние биты, и дробную часть. получим температуру в градусах 
 }
 
-void start_conversion (void){
-  init_sensor_DS18B20();
-  write_DS18B20 (NOID);
-  write_DS18B20 (T_CONVERT);
+void start_conversion (void){        // запустить преобразование датчика 
+  init_sensor_DS18B20();             // инициализируем обмен с датчиком  
+  write_DS18B20 (NOID);              // отправим команду пропуска проверки серийного номера
+  write_DS18B20 (T_CONVERT);         // отправим команду начать преобразование температуры 
 }
 
+
+// Алгоритм для вычисления CRC-8 для DALLAS.
+// Для первого байта CRC = 0, для остальных - то, что получилось от предыдущего.
+// В расчёт CRC входят первые 8 байт DS18B20.
+// 1. Нахождение логического исключающего ИЛИ между младшим битом CRC и младшим битом данных. 
+// 2. Если результат равен 0, то:
+//    - Сдвиг вправо CRC.
+// 3. Если результат равен 1, то:
+//    - Поиск нового значения CRC путем вычисления логического исключающего ИЛИ между CRC и полиномом CRC.
+//    - Сдвиг вправо CRC.
+//    - Установка старшего бита CRC в 1. 
+//    - Сдвиг вправо данных. 
+//    - Повтор данной последовательности 8 раз на 1 байт данных.
 uint8_t DS18B20_crc (uint16_t adress)
 {
-	uint8_t crc = 0;			// ?????????? ??? ?????????? CRC
-	for (uint8_t i=0; i<8; i++)	// ?????? CRC 8-?? ????, 9-? ???? ??? CRC
+	uint8_t crc = 0;			// Переменная для накопления CRC
+	for (uint8_t i=0; i<8; i++)	// Считаю CRC 8-ми байт, 9-й байт это CRC
 	{
-		// ?????????? CRC ?????? ?????
+		// Расчитываю CRC одного байта
 		crc = crc ^ (*(uint16_t*)(adress+i));
 		for (uint8_t j=0; j<8; j++)
 		{
@@ -98,6 +107,7 @@ uint8_t DS18B20_crc (uint16_t adress)
 			else crc >>= 1;
 		}
 	}
-	return crc;	// ????????? CRC
+	return crc;	// Возвращаю CRC
+}
         
-}        
+        

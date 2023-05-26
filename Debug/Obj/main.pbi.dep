@@ -14,6 +14,7 @@ main.pbi: C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\main.c \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\ysizet.h \
   C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8/init_stm.h \
   C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8/delay.h \
-  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8/ADC_HX711.h \
+  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8/Uart.h \
+  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8/Flash.h \
   C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8/DS18B20.h \
-  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8/Uart.h
+  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8/ADC_HX711.h

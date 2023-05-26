@@ -1647,6 +1647,9 @@
             <name>$PROJ_DIR$\DS18B20.h</name>
         </file>
         <file>
+            <name>$PROJ_DIR$\Flash.h</name>
+        </file>
+        <file>
             <name>$PROJ_DIR$\Init_stm.h</name>
         </file>
         <file>
@@ -1663,6 +1666,9 @@
         </file>
         <file>
             <name>$PROJ_DIR$\DS18B20.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Flash.c</name>
         </file>
         <file>
             <name>$PROJ_DIR$\Init_stm.c</name>

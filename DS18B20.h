@@ -27,7 +27,9 @@ asm __volatile__(            \
    : "r5", "r6", "memory"     \
      ) }*/
 
-
+struct DS18B20_union {                    // флаги управления датчиком 
+  uint8_t presence :1;
+};
  
 void init_DS18B20_pin (void);
 void init_sensor_DS18B20 (void);

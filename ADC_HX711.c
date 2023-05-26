@@ -1,12 +1,11 @@
 #include "ADC_HX711.h" 
 
+extern struct flash_data flash ; 
+
 int32_t adc_value = 0;                       // это текущее значение АЦП
 uint32_t adc_new_value = 0;                  // а это то что мы получаем из SPI
-//uint32_t filtr_adc [17];
 int8_t set_poz_bit;                          // это для установки байта в который мы считываем данные из АЦП, так как читаем по 8 бит
 
-int32_t zero_adc = 8385000;                  // предварительный код нуля 
-float cal_coef = 0.05;                       // предварительный калибровочный коэфициент
 float massa = 0;                             // масса в флоат
 int32_t massa_int = 0;                       // масса в инте 
 
@@ -37,7 +36,6 @@ void ADC_pin_automat (void) {
   PC_CR1_C17 = 1;        // control 0 - floating, 1 - Input with pull-up
   PC_CR2_C27 = 0;        // External interrupt disabled
 }
-
 
 void init_SPI_first (void) {
   SPI_CR1_BR = 4;        // clok prescaler
@@ -88,17 +86,18 @@ __interrupt void EXTI2_Handler (void) {          // прерывание от н
   }
 }
 
-void massa_display (void) {                           // преобразуем код АЦП в массу 
-  massa = (float) (adc_value - zero_adc)* cal_coef;   // отнимем код нуля и умножим на калибровочный коэфициент 
-  massa_int = (int32_t) massa;                        // а так же сделаем инт для удобной передачи 
+void massa_display (void) {                                       // преобразуем код АЦП в массу 
+  massa = (float) (adc_value - flash.zero_adc)* flash.cal_coef;   // отнимем код нуля и умножим на калибровочный коэфициент 
+  massa_int = (int32_t) massa;                                    // а так же сделаем инт для удобной передачи 
 }
 
 void zero_set (void) {                                // установка нуля 
-  zero_adc = adc_value; 
+  flash.zero_adc = adc_value; 
 }
 
 void new_kalib_koef (int32_t cal){                   // установка калибровочного коэфициента
-  cal_coef = (float) cal / adc_value;
+  flash.cal_coef = (float) cal / (adc_value - flash.zero_adc);
+  
 }
 
 void stop_adc_read (uint8_t flag) {                  // остановить считывание АЦП ??? 

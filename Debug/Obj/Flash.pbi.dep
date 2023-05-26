@@ -1,5 +1,4 @@
-DS18B20.pbi: \
-  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\delay.h \
+Flash.pbi: C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\delay.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\DLib_Threads.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\yvals.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\ycheck.h \
@@ -9,5 +8,5 @@ DS18B20.pbi: \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\stdint.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\io_macros.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\iostm8s103f3.h \
-  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\DS18B20.h \
-  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\DS18B20.c
+  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\Flash.h \
+  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\Flash.c

@@ -2,10 +2,6 @@
 
 int8_t temperature;                       // переменная для хранения температуры 
 
-struct DS18B20_union {                    // флаги управления датчиком 
-  uint8_t presence :1;
-};
-
 struct DS18B20_union DS18B20_flag = {0};  // инициализация 
 
 void init_DS18B20_pin (void) {
@@ -25,7 +21,7 @@ void init_sensor_DS18B20 (void) {     // инициализация старта
   DELAY_CYCLES(1248);                 // ждем 480us * на 2,6
   DS_PIN_OUT_ON;                      // отпускаем пин
   DELAY_CYCLES(208);                  // ждем 80 us 
-  if (DS_PIN_READ) {                  // читаем пин
+  if (!DS_PIN_READ) {                  // читаем пин
     DS18B20_flag.presence = true;     // если датчик ответил поднимем флаг
   }
   DELAY_CYCLES(1000);                 // подождем еще чтоб закончить старт 

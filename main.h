@@ -26,6 +26,8 @@ void transmit_uart (void);
 int32_t map(int32_t x, int32_t in_min, int32_t in_max, int32_t out_min, int32_t out_max);
 void check_beep (void);
 void blink_err_led (void);
+void bt_set_AT_Comand (void);
+void parsing_uart (void);
 
 #endif /* __MAIN_H */
 

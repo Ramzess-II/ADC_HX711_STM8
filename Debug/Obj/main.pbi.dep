@@ -1,20 +1,20 @@
-main.pbi: C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\main.c \
-  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8/main.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\iostm8s103f3.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc/io_macros.h \
+main.pbi: \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\stdint.h \
+  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\ADC_HX711.h \
+  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\DS18B20.h \
+  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\Flash.h \
+  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\Uart.h \
+  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\delay.h \
+  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\init_stm.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\ycheck.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\yvals.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\DLib_Defaults.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\LIB\dlstm8smn.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\DLib_Product.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\xencoding_limits.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\DLib_Threads.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\stdlib.h \
   C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\ysizet.h \
-  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8/init_stm.h \
-  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8/delay.h \
-  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8/Uart.h \
-  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8/Flash.h \
-  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8/DS18B20.h \
-  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8/ADC_HX711.h
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\stdlib.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\DLib_Threads.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\yvals.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\xencoding_limits.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\DLib_Product.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\DLib_Defaults.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\io_macros.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\iostm8s103f3.h \
+  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\main.h \
+  C:\Users\RSolovyov\Documents\Iar_prjct\ADC_HX711_STM8\main.c

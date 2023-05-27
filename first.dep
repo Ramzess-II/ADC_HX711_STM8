@@ -6,127 +6,70 @@
         <name>Debug</name>
         <outputs>
             <file>$PROJ_DIR$\ADC_HX711.h</file>
-            <file>$PROJ_DIR$\delay.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\main.xcl</file>
-            <file>$PROJ_DIR$\Init_stm.c</file>
-            <file>$PROJ_DIR$\Debug\Obj\first.pbd</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\Init_stm.xcl</file>
-            <file>$PROJ_DIR$\Init_stm.h</file>
             <file>$PROJ_DIR$\DS18B20.h</file>
-            <file>$PROJ_DIR$\main.h</file>
-            <file>$PROJ_DIR$\Uart.h</file>
-            <file>$PROJ_DIR$\ADC_HX711.c</file>
-            <file>$PROJ_DIR$\Uart.c</file>
-            <file>$PROJ_DIR$\DS18B20.c</file>
-            <file>$PROJ_DIR$\main.c</file>
-            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
-            <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
-            <file>$PROJ_DIR$\Uatr.c</file>
-            <file>$PROJ_DIR$\Debug\Obj\ADC_HX711.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
-            <file>$TOOLKIT_DIR$\inc\io_macros.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\Init_stm.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\Uart.xcl</file>
-            <file>$TOOLKIT_DIR$\lib\dbgstm8smd.a</file>
-            <file>$TOOLKIT_DIR$\inc\iostm8s103f3.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\ADC_HX711.xcl</file>
-            <file>$TOOLKIT_DIR$\config\lnkstm8s103f3.icf</file>
-            <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
-            <file>$PROJ_DIR$\Debug\Exe\first.hex</file>
-            <file>$PROJ_DIR$\Debug\Obj\Uatr.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\DS18B20.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\DS18B20.o</file>
-            <file>$TOOLKIT_DIR$\lib\dlstm8smn.h</file>
-            <file>$PROJ_DIR$\Debug\List\first.map</file>
-            <file>$PROJ_DIR$\Debug\Exe\first.out</file>
-            <file>$PROJ_DIR$\Debug\Obj\Uart.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\Uatr.xcl</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
             <file>$PROJ_DIR$\Flash.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\Flash.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\Flash.xcl</file>
+            <file>$PROJ_DIR$\Init_stm.h</file>
+            <file>$PROJ_DIR$\delay.h</file>
+            <file>$PROJ_DIR$\Uart.h</file>
             <file>$PROJ_DIR$\Flash.c</file>
+            <file>$PROJ_DIR$\main.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\Uart.xcl</file>
+            <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
+            <file>$PROJ_DIR$\ADC_HX711.c</file>
+            <file>$PROJ_DIR$\main.h</file>
+            <file>$PROJ_DIR$\DS18B20.c</file>
+            <file>$PROJ_DIR$\Init_stm.c</file>
+            <file>$PROJ_DIR$\Uart.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\ADC_HX711.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\Flash.o</file>
+            <file>$PROJ_DIR$\Uatr.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\Uart.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\Flash.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\ADC_HX711.xcl</file>
+            <file>$PROJ_DIR$\Debug\Exe\first.out</file>
+            <file>$TOOLKIT_DIR$\inc\io_macros.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\DS18B20.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\Init_stm.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\Uatr.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\first.pbd</file>
+            <file>$TOOLKIT_DIR$\lib\dlstm8smn.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\Debug\List\first.map</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\Uatr.xcl</file>
+            <file>$PROJ_DIR$\Debug\Exe\first.hex</file>
+            <file>$TOOLKIT_DIR$\inc\iostm8s103f3.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$TOOLKIT_DIR$\lib\dbgstm8smd.a</file>
+            <file>$PROJ_DIR$\Debug\Obj\DS18B20.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\Init_stm.xcl</file>
+            <file>$TOOLKIT_DIR$\config\lnkstm8s103f3.icf</file>
         </outputs>
         <file>
-            <name>$PROJ_DIR$\Init_stm.c</name>
+            <name>$PROJ_DIR$\Flash.c</name>
             <outputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 24</file>
+                    <file> 16</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 7</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCSTM8</name>
-                    <file> 8 30 23 22 16 6 20 38 43 27 5 1</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\ADC_HX711.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCSTM8</name>
                     <file> 19</file>
                 </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 31</file>
-                </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 0 30 23 22 16 6 20 38 43 27 5 1 44</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Uart.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCSTM8</name>
-                    <file> 41</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 28</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCSTM8</name>
-                    <file> 11 30 23 22 16 6 20 38 43 27 5 1</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\DS18B20.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCSTM8</name>
-                    <file> 37</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 36</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCSTM8</name>
-                    <file> 9 30 23 22 16 6 20 38 43 27 5 1</file>
+                    <file> 2 42 22 37 23 31 36 35 32 28 25 4</file>
                 </tool>
             </inputs>
         </file>
@@ -135,71 +78,68 @@
             <outputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 26</file>
+                    <file> 33</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 2</file>
+                    <file> 39</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 33</file>
+                    <file> 24</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 10 30 23 22 16 6 20 38 43 27 5 25 21 8 1 11 44 9 0</file>
+                    <file> 11 42 22 37 23 31 36 35 32 28 25 29 43 3 4 5 2 1 0</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>[ROOT_NODE]</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 40 39</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Uatr.c</name>
+            <name>$PROJ_DIR$\ADC_HX711.c</name>
             <outputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 35</file>
+                    <file> 15</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 42</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Debug\Exe\first.out</name>
-            <outputs>
-                <tool>
-                    <name>OBJCOPY</name>
-                    <file> 34</file>
-                </tool>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 39</file>
+                    <file> 20</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
-                    <name>ILINK</name>
-                    <file> 32 19 37 45 24 26 41 17 29</file>
+                    <name>ICCSTM8</name>
+                    <file> 0 42 22 37 23 31 36 35 32 28 25 4 2</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\Flash.c</name>
+            <name>$PROJ_DIR$\DS18B20.c</name>
             <outputs>
                 <tool>
                     <name>ICCSTM8</name>
                     <file> 45</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 26</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 1 42 22 37 23 31 36 35 32 28 25 4</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Init_stm.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 27</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
@@ -209,7 +149,67 @@
             <inputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 44 30 23 22 16 6 20 38 43 27 5 1</file>
+                    <file> 3 42 22 37 23 31 36 35 32 28 25 4</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Uart.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 18</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 8</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 5 42 22 37 23 31 36 35 32 28 25 4</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 21 38</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Uatr.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 30</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 40</file>
+                </tool>
+            </outputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\first.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 38</file>
+                </tool>
+                <tool>
+                    <name>OBJCOPY</name>
+                    <file> 41</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 47 15 45 16 27 33 18 9 44</file>
                 </tool>
             </inputs>
         </file>

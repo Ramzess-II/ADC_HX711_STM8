@@ -97,8 +97,9 @@ void zero_set (void) {                                // установка ну
 
 void new_kalib_koef (int32_t cal){                   // установка калибровочного коэфициента
   flash.cal_coef = (float) cal / (adc_value - flash.zero_adc);
-  
 }
+
+
 
 void stop_adc_read (uint8_t flag) {                  // остановить считывание АЦП ??? 
   if (flag) {

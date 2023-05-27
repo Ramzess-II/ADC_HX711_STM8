@@ -14,6 +14,7 @@ uint16_t tim_to_update_ds18b20 = 0;
 uint8_t  count_buzer = 0;
 uint8_t tim_to_transmit = 0;
 uint8_t tim_to_led = 0;
+uint8_t number_byte_for_send = 0;
 
 struct flags {                                      // флаги 
   uint8_t start_conv :1;
@@ -22,9 +23,10 @@ struct flags {                                      // флаги
   uint8_t beep_flag :1;
   uint8_t buzzer_on :1;
   uint8_t beep_start :1;
+  uint8_t new_data_send :1;
 };
 
-struct flags flag = {0,0,0,0,0,0};                 // инициализация флагов
+struct flags flag = {0,0,0,0,0,0,0};                 // инициализация флагов
 
 int main( void )
 {
@@ -42,7 +44,7 @@ int main( void )
   SCK_PIN_OFF;                                    // пин клоков на землю
   DS_PIN_OUT_ON;                                  // пин данных датчика DS18B20 на землю
 
- 
+  bt_set_AT_Comand();
   
   if (!PC_IDR_IDR3) {                             // если нажата кнопка калибровки
     PIN_LED_ON;                                   // покажем светиком что ждем АЦП
@@ -98,30 +100,122 @@ int main( void )
     }
     transmit_uart ();                             // постоянно передаем по юарту данные о весе и температуре
     check_beep ();                                // проверим не достиг ли вес начала пиканья 
-    blink_err_led();                              // 
+    blink_err_led();                              // отслеживаем ошибки и мигаем светиком если они есть
+    parsing_uart();                               // парсим команды по юарту
+  }
+}
+
+void parsing_uart (void) {
+  if (uart_flag.rx_data_ok) {
+    uart_flag.rx_data_ok = false;
+    
+    if (uart_rx_buf[0] == 'C' && uart_rx_buf[1] == 'A' && uart_rx_buf[2] == 'L' ){
+      if (uart_rx_buf[3] == 'Z' && uart_rx_buf[4] == 'E' && uart_rx_buf[5] == 'R') {
+        zero_set ();                                 // установим ноль
+        data_eeprom_write();                         // запишем новые данные в еепром после калибровки 
+        while (uart_flag.tx_busy);                   // дождемся пока передадутся данные
+        uart_tx_buf [0] = 'O';                       // "O"
+        uart_tx_buf [1] = 'K';                       // "K" 
+        number_byte_for_send = 1;
+        flag.new_data_send = true;                   // скажем чтоб при следующей отправке мы отправили данные которые только что внесли 
+      }
+      if (uart_rx_buf[3] == 'M'){
+        uint8_t new_massa;                           // для сборки массы из буфера 
+        new_massa = ( uart_rx_buf[4] - 0x30) * 10;   // преобразовываем из АСКИ в нех 
+        new_massa += ( uart_rx_buf[5] - 0x30);
+        new_kalib_koef (new_massa * 1000);           // потому что мы в граммах калибруем 
+      }
+    }
+    
+    if (uart_rx_buf[0] == 'G' && uart_rx_buf[1] == 'E' && uart_rx_buf[2] == 'T' ){
+        while (uart_flag.tx_busy);                   // дождемся пока передадутся данные
+        uart_tx_buf [0] = 'O';
+        uart_tx_buf [1] = 'V';
+        uart_tx_buf [2] = 'R';
+        uart_tx_buf [3] = (abs (flash.max_weight / 1000) / 100) + 0x30;       // значение веса в кг так как у нас в граммах все 
+        uart_tx_buf [4] = (abs (flash.max_weight / 1000) / 10) % 10 + 0x30;
+        uart_tx_buf [5] =  abs (flash.max_weight / 1000) % 10 + 0x30;
+        uart_tx_buf [6] = 'k';                      // "k"
+        uart_tx_buf [7] = 'g';                      // "g"
+        number_byte_for_send = 7;
+        flag.new_data_send = true;
+  }
+    for (int i = 0; i < 10; i ++) {
+      uart_rx_buf [i] = 0x00;
+    }
   }
 }
 
 void transmit_uart (void) {                       // передача по юарту
   if (!tim_to_transmit) {                         // проверим не настало ли время отправки
     while (uart_flag.tx_busy);
-    tim_to_transmit = TIM_UART_SEND;              // зададим новый временной диапазон
-    uart_tx_buf [0] = 0x54;                       // "T"
-    uart_tx_buf [1] = 0x3D;                       // "="
-    uart_tx_buf [2] = (temperature / 10) + 0x30;  // значение температуры
-    uart_tx_buf [3] = (temperature  % 10) + 0x30;
-    uart_tx_buf [4] = 0x20;                       // " "
-    uart_tx_buf [5] = 0x4D;                       // "M"
-    uart_tx_buf [6] = 0x3D;                       // "="
-    if (massa_int >= 0) uart_tx_buf [7] = 0x2B;   // "+"
-    else uart_tx_buf [7] = 0x2D;                  // "-"
-    uart_tx_buf [8] = (abs (massa_int / 1000) / 100) + 0x30;       // значение веса в кг
-    uart_tx_buf [9] = (abs (massa_int / 1000) / 10) % 10 + 0x30;
-    uart_tx_buf [10] = abs (massa_int / 1000) % 10 + 0x30;
-    uart_tx_buf [11] = 0x6B;                      // "k"
-    uart_tx_buf [12] = 0x67;                      // "g"
-    uart_transmit_data (12);
+    if (flag.new_data_send) {
+      tim_to_transmit = TIM_UART_SEND;              // зададим новый временной диапазон
+      uart_transmit_data (number_byte_for_send);
+      flag.new_data_send = false;
+    } else {
+      tim_to_transmit = TIM_UART_SEND;              // зададим новый временной диапазон
+      uart_tx_buf [0] = 0x54;                       // "T"
+      uart_tx_buf [1] = 0x3D;                       // "="
+      uart_tx_buf [2] = (temperature / 10) + 0x30;  // значение температуры
+      uart_tx_buf [3] = (temperature  % 10) + 0x30;
+      uart_tx_buf [4] = 0x20;                       // " "
+      uart_tx_buf [5] = 0x4D;                       // "M"
+      uart_tx_buf [6] = 0x3D;                       // "="
+      if (massa_int / 1000 > 0) uart_tx_buf [7] = 0x2B;              // "+"
+      else uart_tx_buf [7] = 0x2D;                                   // "-"
+      if (massa_int / 1000 == 0) uart_tx_buf [7] = 0x20;              // " "
+      uart_tx_buf [8] = (abs (massa_int / 1000) / 100) + 0x30;       // значение веса в кг
+      uart_tx_buf [9] = (abs (massa_int / 1000) / 10) % 10 + 0x30;
+      uart_tx_buf [10] = abs (massa_int / 1000) % 10 + 0x30;
+      uart_tx_buf [11] = 0x6B;                      // "k"
+      uart_tx_buf [12] = 0x67;                      // "g"
+      uart_transmit_data (12);
+    }
   }
+}
+
+void bt_set_AT_Comand (void) {
+    uart_tx_buf [0] = 0x41;                       // "A"
+    uart_tx_buf [1] = 0x54;                       // "T"
+    uart_tx_buf [2] = 0x2B;                       // "+"
+    uart_tx_buf [3] = 0x42;                       // "B"
+    uart_tx_buf [4] = 0x41;                       // "A"
+    uart_tx_buf [5] = 0x55;                       // "U"
+    uart_tx_buf [6] = 0x44;                       // "D"
+    uart_tx_buf [7] = 0x39;                       // "9"
+    uart_tx_buf [8] = 0x36;                       // "6"
+    uart_tx_buf [9] = 0x30;                       // "0"
+    uart_tx_buf [10] = 0x30;                      // "0"
+    uart_transmit_data (10);
+    delay_ms (200);
+    uart_tx_buf [0] = 0x41;                       // "A"
+    uart_tx_buf [1] = 0x54;                       // "T"
+    uart_tx_buf [2] = 0x2B;                       // "+"
+    uart_tx_buf [3] = 0x4E;                       // "N"
+    uart_tx_buf [4] = 0x41;                       // "A"
+    uart_tx_buf [5] = 0x4D;                       // "M"
+    uart_tx_buf [6] = 0x45;                       // "E"
+    uart_tx_buf [7] = 0x53;                       // "S"
+    uart_tx_buf [8] = 0x43;                       // "C"
+    uart_tx_buf [9] = 0x41;                       // "A"
+    uart_tx_buf [10] = 0x4C;                      // "L"
+    uart_tx_buf [11] = 0x45;                      // "E"
+    uart_tx_buf [12] = 0x53;                      // "S"
+    uart_transmit_data (12);
+    delay_ms (200);
+    uart_tx_buf [0] = 0x41;                       // "A"
+    uart_tx_buf [1] = 0x54;                       // "T"
+    uart_tx_buf [2] = 0x2B;                       // "+"
+    uart_tx_buf [3] = 0x50;                       // "P"
+    uart_tx_buf [4] = 0x49;                       // "I"
+    uart_tx_buf [5] = 0x4E;                       // "N"
+    uart_tx_buf [6] = 0x31;                       // "1"
+    uart_tx_buf [7] = 0x31;                       // "1"
+    uart_tx_buf [8] = 0x31;                       // "1"
+    uart_tx_buf [9] = 0x31;                       // "1"
+    uart_transmit_data (9);
+    delay_ms (200);
 }
 
 void adc_set_pulse (uint8_t pulse) {              // штука которая делает два дополнительных импкльса на линию SCK АЦП

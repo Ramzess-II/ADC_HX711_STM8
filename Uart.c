@@ -15,8 +15,11 @@ void init_uarts (void) {  // инициализация пинов
   
     // PD6 RX
   PD_DDR_DDR6 = 0;       // direction port 0 - input, 1 - output 
-  PD_CR1_C16 = 1;        // control 0 - floating, 1 - Input with pull-up
+  PD_CR1_C16 = 1;        // control 0 - floating, 1 - Input with pull-up 
   //PD_CR2_C26 = 0;      // External interrupt enabled\
+  
+  PA_DDR_DDR2 = 0;       // direction port 0 - input, 1 - output 
+  PA_CR1_C12 = 1;        // control 0 - floating, 1 - Input with pull-up
   
   UART1_BRR1 = 0x69;      // младший и старший байт баудрейта
   UART1_BRR2 = 0x03;      // baud
@@ -65,3 +68,12 @@ __interrupt void UART1_T_TXE_Handler (void){  // прерывание по пе�
   }
 }
 
+
+// команды для общения с весами
+/*
+GETMM - получить вес максимальной натяжки
+CALZERO - установить текущий код АЦП как код нуля
+CALM25 - откалибровать весом 25кг
+CALPUSH - текущее значение массы как вес отпускания 
+CALPH15 - задать вес отпускания 15 кг
+*/
